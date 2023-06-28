@@ -370,6 +370,7 @@
     left: -3%;
     color: white;
     font-family: 'CustomFont', sans-serif;
+
 }
 
 #FAQsTitle {
@@ -381,15 +382,30 @@
 }
 
 #Preguntas {
-    width: 39vw;
+    width: 80vw;
     display: flex;
     justify-content: space-between;
     margin-top: -1%;
     border: 1px solid white;
-    flex-direction: column;
+    flex-direction: row;
     padding: 2%;
     border-left: hidden;
     border-right: hidden;
+    gap: 10%;
+    overflow: hidden;
+    /* Added overflow property */
+}
+
+#Preguntas1,
+#Preguntas2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    /* Updated width to 50% */
+    height: 100%;
+    /* Added fixed height */
+    margin-left: 5%;
 }
 
 #FAQsPregunta {
@@ -397,27 +413,31 @@
     font-size: 1.5vw;
     border-left: 1px solid white;
     padding-left: 2.35%;
+    margin-bottom: 10%;
+    margin-left: 5%;
 }
-
 
 .faq-answer {
     display: none;
     text-align: justify;
     font-size: 1.2vw;
     color: grey;
-
+    height: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 50%;
 }
 
-.faq-question:hover {
-    cursor: pointer;
-    transform: scale(105%);
 
+#FAQsPregunta:hover {
+    cursor: pointer;
+    transform: scale(102%);
 }
 
 .faq-question.active .faq-answer {
     display: block;
+    width: 90%;
 }
-
 
 
 

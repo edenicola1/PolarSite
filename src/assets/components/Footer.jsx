@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import '../../styles/Footer.css';
 import Logo from "../../../Logotype 2-02.png";
+import MailLogo from "../../../mail_FILL0_wght400_GRAD0_opsz48.png";
+import PhoneLogo from "../../../call_FILL0_wght400_GRAD0_opsz48.png";
+import WppLogo from "../../../whatsapp.svg";
 
 
 const Footer = () => {
@@ -53,8 +56,18 @@ const Footer = () => {
                 <div className="footer-column">
                     <h3>Contacto</h3>
                     <ul>
-                        <li>Email: contacto@polarplungecompany.com</li>
-                        <li>Teléfono: 095786382 / 095444525</li>
+                        <li>
+                            <img src={MailLogo} id="MailLogo" />
+                            contacto@polarplungecompany.com
+                        </li>
+                        <li>
+                            <img src={PhoneLogo} id="PhoneLogo" />
+                            095786382
+                        </li>
+                        <li>
+                            <img src={WppLogo} id="WppLogo" />
+                            095444525
+                        </li>
                     </ul>
                 </div>
             </section>

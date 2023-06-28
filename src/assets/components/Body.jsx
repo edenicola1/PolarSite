@@ -9,6 +9,7 @@ import LogoRes from "../../../Icon Aumento Resistencia-01.png";
 import LogoMood from "../../../icon mood.png";
 import LogoMental from "../../../icon enfoque mental-01.png";
 import LogoPlanta from "../../../icon Sistema inmunológico-01.png";
+
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -209,54 +210,58 @@ function Body() {
             <section id="FAQs">
                 <p id="FAQsTitle" className="hide">INFORMACIÓN DE USO</p>
                 <div id="Preguntas" className="hide">
-                    <div
-                        className={`faq-question ${activeQuestion === 0 ? 'active' : ''}`}
-                        onClick={() => handleQuestionClick(0)}
-                    >
-                        <p id="FAQsPregunta">¿Cuánto tiempo debería durar cada inmersión en frío?</p>
-                        <div className="faq-answer">
-                            <p>Lo ideal es permanecer en agua fría durante tres a ocho minutos. La terapia con agua fría funciona mejor con la combinación adecuada de tiempo y temperatura. Cada persona es diferente y algunas pueden tolerar temperaturas más bajas.</p>
+                    <div id="Preguntas1">
+                        <div
+                            className={`faq-question ${activeQuestion === 0 ? 'active' : ''}`}
+                            onClick={() => handleQuestionClick(0)}
+                        >
+                            <p id="FAQsPregunta">¿Cuánto tiempo debería durar cada inmersión en frío?</p>
+                            <div className="faq-answer">
+                                <p>Lo ideal es permanecer en agua fría durante tres a ocho minutos. La terapia con agua fría funciona mejor con la combinación adecuada de tiempo y temperatura. Cada persona es diferente y algunas pueden tolerar temperaturas más bajas.</p>
+                            </div>
+                        </div>
+
+                        <div className={`faq-question ${activeQuestion === 1 ? 'active' : ''}`} onClick={() => handleQuestionClick(1)}>
+                            <p id="FAQsPregunta">¿Cuánta cantidad de hielo es necesaria?</p>
+                            <div className="faq-answer">
+                                <p>Recomendamos agregar entre 5 y 10 kg de hielo al Pod por sesión. La cantidad de hielo necesaria depende de lo fría que desees que esté. Además, dependiendo de la estación del año, es posible que sea necesario agregar menos hielo.
+                                    Dado que el pod está aislado, mantendrá el agua fría durante varios días, por lo que es posible que no tengas que agregar tanto hielo después de la primera vez.</p>
+                            </div>
+                        </div>
+
+                        <div className={`faq-question ${activeQuestion === 2 ? 'active' : ''}`} onClick={() => handleQuestionClick(2)}>
+                            <p id="FAQsPregunta">¿Cuál es la temperatura ideal para la inmersión?</p>
+                            <div className="faq-answer">
+                                <p>Para las primeras sesiones, comenzar a una temperatura de alrededor de 15°C, y luego ir bajando gradualmente la temperatura cada sesión. De esta manera, tu cuerpo se irá acostumbrando al frío.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`faq-question ${activeQuestion === 1 ? 'active' : ''}`} onClick={() => handleQuestionClick(1)}>
-                        <p id="FAQsPregunta">¿Cuánta cantidad de hielo es necesaria?</p>
-                        <div className="faq-answer">
-                            <p>Recomendamos agregar entre 5 y 10 kg de hielo al Pod por sesión. La cantidad de hielo necesaria depende de lo fría que desees que esté. Además, dependiendo de la estación del año, es posible que sea necesario agregar menos hielo.
-                                Dado que el pod está aislado, mantendrá el agua fría durante varios días, por lo que es posible que no tengas que agregar tanto hielo después de la primera vez.</p>
+                    <div id="Preguntas2">
+
+                        <div className={`faq-question ${activeQuestion === 3 ? 'active' : ''}`} onClick={() => handleQuestionClick(3)}>
+                            <p id="FAQsPregunta">¿Cómo se llena el Pod?</p>
+                            <div className="faq-answer">
+                                <p>El Pod viene con una llave en la parte inferior para llenar. Ahí se conecta una manguera y se llena el Pod. Para sacarle el agua, simplemente se abre la llave.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className={`faq-question ${activeQuestion === 2 ? 'active' : ''}`} onClick={() => handleQuestionClick(2)}>
-                        <p id="FAQsPregunta">¿Cuál es la temperatura ideal para la inmersión?</p>
-                        <div className="faq-answer">
-                            <p>Para las primeras sesiones, comenzar a una temperatura de alrededor de 15°C, y luego ir bajando gradualmente la temperatura cada sesión. De esta manera, tu cuerpo se irá acostumbrando al frío.</p>
+                        <div className={`faq-question ${activeQuestion === 4 ? 'active' : ''}`} onClick={() => handleQuestionClick(4)}>
+                            <p id="FAQsPregunta">¿Cada cuánto tiempo cambio el agua del Pod?</p>
+                            <div className="faq-answer">
+                                <p>Para mantener el agua limpia durante períodos, lo mejor es agregar alrededor de 1kg de sal marina. Con esto, el agua del Pod puede durar hasta un mes sin ser cambiada.
+                                    Si no se le agrega sal, recomendamos limpiar el pod cada tres a cinco sesiones de inmersión.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className={`faq-question ${activeQuestion === 3 ? 'active' : ''}`} onClick={() => handleQuestionClick(3)}>
-                        <p id="FAQsPregunta">¿Cómo se llena el Pod?</p>
-                        <div className="faq-answer">
-                            <p>El Pod viene con una llave en la parte inferior para llenar. Ahí se conecta una manguera y se llena el Pod. Para sacarle el agua, simplemente se abre la llave.</p>
+                        <div className={`faq-question ${activeQuestion === 5 ? 'active' : ''}`} onClick={() => handleQuestionClick(5)}>
+                            <p id="FAQsPregunta">¿Se puede instalar a la intemperie y dejarlo ahí?</p>
+                            <div className="faq-answer">
+                                <p>El material con el que se hacen los Pods hace que sean muy resistentes a las temperaturas y las condiciones exteriores. Además, el cobertor es perfecto para cuando no se esté usando y se desee dejarlo afuera.</p>
+                            </div>
                         </div>
+
                     </div>
-
-                    <div className={`faq-question ${activeQuestion === 4 ? 'active' : ''}`} onClick={() => handleQuestionClick(4)}>
-                        <p id="FAQsPregunta">¿Cada cuánto tiempo cambio el agua del Pod?</p>
-                        <div className="faq-answer">
-                            <p>Para mantener el agua limpia durante períodos, lo mejor es agregar alrededor de 1kg de sal marina. Con esto, el agua del Pod puede durar hasta un mes sin ser cambiada.
-                                Si no se le agrega sal, recomendamos limpiar el pod cada tres a cinco sesiones de inmersión.</p>
-                        </div>
-                    </div>
-
-                    <div className={`faq-question ${activeQuestion === 5 ? 'active' : ''}`} onClick={() => handleQuestionClick(5)}>
-                        <p id="FAQsPregunta">¿Se puede instalar a la intemperie y dejarlo ahí?</p>
-                        <div className="faq-answer">
-                            <p>El material con el que se hacen los Pods hace que sean muy resistentes a las temperaturas y las condiciones exteriores. Además, el cobertor es perfecto para cuando no se esté usando y se desee dejarlo afuera.</p>
-                        </div>
-                    </div>
-
-
                 </div>
             </section>
 
