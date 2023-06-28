@@ -1,16 +1,13 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('../../neue-june/Matt Chansky - Neue June Light.otf') format('opentype'),
-
+    src: url('../../neue-june/Matt Chansky - Neue June Light.otf') format('opentype');
 }
-
 
 footer {
     height: 60vh;
     background-color: white;
-    width: 105.5%;
+    width: 100%;
     position: relative;
-    left: -3%;
     color: black;
     /* transition: transform 2s ease;
     transform: translateY(100%); */
@@ -27,7 +24,7 @@ footer {
     flex-direction: row;
     opacity: 0;
     padding-top: 2%;
-
+    margin-bottom: 5%;
 }
 
 #FooterContainer.animate-footer #FooterLinks {
@@ -41,10 +38,8 @@ footer {
     opacity: 0;
     transform: translateY(20px);
     display: flex;
-    justify-content: center;
     flex-direction: column;
-
-
+    text-align: center;
 }
 
 #FooterContainer.animate-footer .footer-column {
@@ -54,25 +49,47 @@ footer {
     /* Delay the opacity and transform transition */
 }
 
-
 .footer-column h3 {
     font-size: 2vw;
-
 }
 
 .footer-column ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
-    text-align: justify;
-
+    flex-direction: column;
+    text-align: center;
+    margin-left: -10%;
 }
 
 .footer-column li {
     margin-bottom: 5%;
     font-size: 0.9vw;
+    text-align: justify;
+    position: relative;
+}
+
+
+#WppLogo {
+    position: absolute;
+    width: 30%;
+    margin-right: 1%;
+    top: -10%;
+    left: -40%;
+}
+
+#MailLogo {
+    position: absolute;
+    width: 10%;
+    top: -10%;
+    left: -12%;
+}
+
+#PhoneLogo {
+    position: absolute;
+    width: 30%;
+    top: -10%;
+    left: -35%;
 }
 
 #FooterInfo {
@@ -89,20 +106,16 @@ footer {
     /* Delay the opacity transition */
 }
 
-
 #FooterLogo {
     width: 10%;
     margin-bottom: -1%;
 }
 
-#WppLogo {
-    width: 5%;
+#mailto {
+    color: black;
 }
 
-#MailLogo {
-    width: 10%;
-}
-
-#PhoneLogo {
-    width: 20%;
+.footer-column li:hover {
+    transform: scale(110%);
+    cursor: pointer;
 }

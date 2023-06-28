@@ -57,9 +57,12 @@ const Footer = () => {
                     <h3>Contacto</h3>
                     <ul>
                         <li>
-                            <img src={MailLogo} id="MailLogo" />
-                            contacto@polarplungecompany.com
+                            <a id="mailto" href="mailto:contacto@polarplungecompany.com">
+                                <img src={MailLogo} id="MailLogo" />
+                                contacto@polarplungecompany.com
+                            </a>
                         </li>
+
                         <li>
                             <img src={PhoneLogo} id="PhoneLogo" />
                             095786382

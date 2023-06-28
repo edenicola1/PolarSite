@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../neue-june/Matt Chansky - Neue June Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CustomFont-Bold';
+    src: url('../neue-june/Matt Chansky - Neue June Bold.otf') format('opentype');
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #121212;
+    z-index: 9999;
+    font-family: 'CustomFont', sans-serif;
+}
+
+#HeaderLogo {
+    width: 12%;
+    height: 180%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5%;
+    margin-left: -43%;
+    font-size: 1.1vw;
+    color: white;
+    cursor: pointer;
+}
+
+nav li {
+    position: relative;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+nav li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+nav li:hover {
+    color: white;
+}
+
+nav li:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+
+
+#Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.ModalContent {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 70%;
+    max-height: 80%;
+    text-align: center;
+    position: relative;
+}
+
+#ModalTitle {
+    font-size: 4vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#ModalText {
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    color: white;
+    text-align: justify;
+    padding: 3%;
+}
+
+
+#Cross {
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    filter: brightness(0) invert(1);
+}
+
+
+#Contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'CustomFont', sans-serif;
+    margin-left: 10%;
+    margin-top: -5%;
+
+}
+
+#Carousel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#PodPic {
+    width: 80%;
+    height: 50%;
+}
+
+#PodInfo {
+    flex: 1;
+    text-align: justify;
+}
+
+
+#PodTitle {
+    font-size: 3vw;
+    color: #121212;
+    margin-bottom: 2%;
+    font-family: 'CustomFont-Bold', sans-serif;
+}
+
+#PodPrecio {
+    font-size: 1vw;
+    color: #888;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+#PodPrecio::before {
+    content: "$180.00 USD";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+#PodPrecio::after {
+    content: "$150.00 USD";
+    color: #000;
+}
+
+#PodSubtitle {
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+#PodParagraph {
+    font-size: 0.8vw;
+    line-height: 2;
+    margin-bottom: 5%;
+    width: 57%;
+}
+
+#Agregar {
+    padding: 2% 4%;
+    font-size: 1vw;
+    background-color: #3b8ed6;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 35%;
+}

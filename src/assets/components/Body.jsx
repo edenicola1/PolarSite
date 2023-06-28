@@ -181,13 +181,15 @@ function Body() {
                 <p id="ProductsDescription" className="hide">Polar te ofrece los mejores productos de recuperación deportiva que no se encuentran en las tiendas tradicionales </p>
                 <div id="ProductCarousel" >
                     <Carousel showArrows={true} showThumbs={false} infiniteLoop={true} showStatus={false} showIndicators={false}>
-                        <div id="divProduct">
-                            <img src={Product1} alt="Image 1" id="fotoProduct1" />
-                            <div className="slide-legend">
-                                <h3>Pod de inmersión en frío </h3>
-                                {/* <p> $4000 </p> */}
+                        <a href="/icepods">
+                            <div id="divProduct">
+                                <img src={Product1} alt="Image 1" id="fotoProduct1" />
+                                <div className="slide-legend">
+                                    <h3>Pod de inmersión en frío </h3>
+                                    {/* <p> $4000 </p> */}
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div id="divProduct">
                             <img src={Product2} alt="Image 2" id="fotoProduct2" />
                             <div className="slide-legend">
@@ -265,21 +267,23 @@ function Body() {
                 </div>
             </section>
 
-            <section id="PolarSocial" >
-                <p id="SocialsTitle" className="hide"> POLAR SOCIAL</p>
-                <p id="SocialsDescription" className="hide"> Entrá a nuestro Instagram para ver el contenido de nuestros deportistas, coaches de salud y todos los usuarios de Polar! </p>
+            <section id="PolarSocial">
+                <p id="SocialsTitle" className="hide">POLAR SOCIAL</p>
+                <p id="SocialsDescription" className="hide">
+                    Entrá a nuestro Instagram para ver el contenido de nuestros deportistas, coaches de salud y todos los usuarios de Polar!
+                </p>
 
                 <div id="DivFotos" className="hide">
-                    <img src={Foto1} id="Foto1" className="image-hover" alt="Foto 1" />
-                    <img src={Foto2} id="Foto2" className="image-hover" alt="Foto 2" />
-                    <img src={Foto3} id="Foto3" className="image-hover" alt="Foto 3" />
+                    <img src={Foto1} id="Foto1" alt="Foto 1" className="scaled-image" />
+                    <img src={Foto2} id="Foto2" alt="Foto 2" className="scaled-image" />
+                    <img src={Foto3} id="Foto3" alt="Foto 3" className="scaled-image" />
                 </div>
 
-                <img src={IgLogo} id="IgLogo" className="image-hover" alt="Instagram Logo" />
-
-
-
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src={IgLogo} id="IgLogo" alt="Instagram Logo" className="scaled-image" />
+                </a>
             </section>
+
         </div>
     )
 }

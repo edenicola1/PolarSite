@@ -109,11 +109,10 @@
 
 #Benefits {
     position: relative;
-    /* Add position relative */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    /* Center the content vertically */
     margin-top: 20%;
     font-family: 'CustomFont', sans-serif;
 }
@@ -124,12 +123,9 @@
 }
 
 #TitleandDescription {
-    position: absolute;
-    /* Add position absolute */
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    position: absolute;
+    top: 5%;
 }
 
 #BeneficiosTitle {
@@ -453,7 +449,7 @@
     background-color: #121212;
     margin-top: 10%;
     z-index: 1;
-    width: 105.5%;
+    width: 106%;
     position: relative;
     left: -3%;
     font-family: 'CustomFont', sans-serif;
@@ -464,7 +460,7 @@
     font-size: 4.5vw;
     text-align: center;
     color: white;
-    margin-top: -2%;
+    margin-top: 0%;
 
 }
 
@@ -478,9 +474,7 @@
 #IgLogo {
     background-color: transparent;
     width: 8%;
-    margin-bottom: -5%;
-    margin-top: 2%;
-    margin-left: -1%;
+    margin-top: 3%;
 }
 
 #DivFotos {
@@ -504,15 +498,15 @@
     width: 25%;
 }
 
-.image-hover {
-    transition: transform .4s;
-    cursor: pointer;
+.scaled-image {
+    transition: transform 0.3s ease;
 }
 
-.image-hover:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+.scaled-image:hover {
+    transform: scale(1.1);
 }
+
+
 
 /* Define fade-in animation */
 @keyframes fade-in {
