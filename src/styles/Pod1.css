@@ -125,26 +125,22 @@ nav li:hover::before {
     align-items: center;
     justify-content: center;
     font-family: 'CustomFont', sans-serif;
+    margin-top: 5%;
     margin-left: 10%;
-    margin-top: -5%;
-
 }
 
 #Carousel {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-#PodPic {
-    width: 80%;
-    height: 50%;
+    width: 40%;
 }
 
 #PodInfo {
-    flex: 1;
+    width: 50%;
     text-align: justify;
+    margin-left: 5%;
+    margin-top: 4%;
 }
+
+
 
 
 #PodTitle {
@@ -169,25 +165,27 @@ nav li:hover::before {
     transform: translateY(-50%);
     color: #888;
     text-decoration: line-through;
-    margin-right: 10px;
 }
 
 #PodPrecio::after {
     content: "$150.00 USD";
     color: #000;
+    margin-left: 1%;
 }
 
 #PodSubtitle {
     font-size: 1.3vw;
     font-weight: bold;
     margin-bottom: 2%;
+    color: #121212;
 }
 
 #PodParagraph {
     font-size: 0.8vw;
     line-height: 2;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     width: 57%;
+    color: #888;
 }
 
 #Agregar {
@@ -199,4 +197,31 @@ nav li:hover::before {
     border-radius: 20px;
     cursor: pointer;
     width: 35%;
+}
+
+#Info {
+    color: #121212;
+    height: fit-content;
+    margin-top: 5%;
+    border-top: 0.7px solid black;
+    width: 60%;
+}
+
+.InfoItem {
+    border-bottom: 0.7px solid black;
+    padding-bottom: 2%;
+    position: relative;
+    cursor: pointer;
+}
+
+.InfoItem:hover {
+    transform: scale(102%);
+}
+
+#Sum {
+    width: 5%;
+    opacity: 0.7;
+    position: absolute;
+    left: 94%;
+    top: -5%;
 }

@@ -64,25 +64,25 @@ const Header = ({ background }) => {
                 <ul
                     className={`nav-links ${scrollBackground ? 'black' : ''} ${scrollLeft ? 'scroll-left' : ''}`}
                 >
-                    <li>
-                        <a href="/" onClick={(event) => scrollToSection(event, 'Benefits')}>
-                            BENEFICIOS
-                        </a>
+                    <li
+                        onClick={(event) => scrollToSection(event, 'Benefits')}>
+                        BENEFICIOS
+
                     </li>
-                    <li>
-                        <a href="/" onClick={(event) => scrollToSection(event, 'Products')}>
-                            PODS
-                        </a>
+                    <li
+                        onClick={(event) => scrollToSection(event, 'Products')}>
+                        PODS
+
                     </li>
-                    <li>
-                        <a onClick={openModal}>
-                            SOBRE NOSOTROS
-                        </a>
+                    <li
+                        onClick={openModal}>
+                        SOBRE NOSOTROS
+
                     </li>
-                    <li>
-                        <a href="/" onClick={(event) => scrollToSection(event, 'FAQs')}>
-                            INFORMACIÓN DE USO
-                        </a>
+                    <li
+                        onClick={(event) => scrollToSection(event, 'FAQs')}>
+                        INFORMACIÓN DE USO
+
                     </li>
                 </ul>
             </nav>
@@ -91,13 +91,13 @@ const Header = ({ background }) => {
             {showModal && (
                 <div id="Modal">
                     <div className="ModalContent">
-                        <p id="ModalTitle">SOBRE NOSOTROS</p>
+                        <p id="ModalTitle"> SOBRE NOSOTROS</p>
                         <p id="ModalText">
                             Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país.
 
                             Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando el instrumento vital para empezar en este camino.
 
-                            Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada, donde juntos podemos crear un impacto positivo en el mundo del bienestar y marcar la diferencia en la vida de las personas.</p>
+                            Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada. </p>
 
                         <img src={Cross} id="Cross" onClick={closeModal}></img>
 

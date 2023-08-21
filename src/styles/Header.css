@@ -45,13 +45,14 @@ header {
     cursor: pointer;
 }
 
-.nav-links li a {
+.nav-links li {
     position: relative;
     transition: color 0.3s ease;
     color: white;
+    text-decoration: none;
 }
 
-.nav-links li a::before {
+.nav-links li::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -64,17 +65,17 @@ header {
     transition: transform 0.3s ease, visibility 0.3s ease;
 }
 
-.nav-links li a:hover {
+.nav-links li:hover {
     color: white;
 }
 
-.nav-links li a:hover::before {
+.nav-links li:hover::before {
     visibility: visible;
     transform: scaleX(1);
 }
 
 
-.nav-links.black li a {
+.nav-links.black li {
     color: black;
 }
 
@@ -90,7 +91,7 @@ header {
     font-size: 1.2vw;
 }
 
-.nav-links.scroll-left li a::before {
+.nav-links.scroll-left li:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -103,11 +104,11 @@ header {
     transition: transform 0.3s ease, visibility 0.3s ease;
 }
 
-.nav-links.scroll-left li a:hover {
+.nav-links.scroll-left li:hover {
     color: black;
 }
 
-.nav-links li a:hover::before {
+.nav-links li:hover::before {
     visibility: visible;
     transform: scaleX(1);
 }
@@ -123,6 +124,7 @@ header {
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(5px);
+    z-index: 100;
 }
 
 .ModalContent {

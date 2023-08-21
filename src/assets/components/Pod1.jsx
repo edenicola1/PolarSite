@@ -1,14 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import Logo from '../../../Logotype 2-02.png';
-import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg'
-import "../../styles/Pod1.css"
-import PodPic from '../../../Screenshot 2023-06-27 at 12.21.56.png'
+import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg';
+import "../../styles/Pod1.css";
+import PodPic from '../../../Screenshot 2023-06-27 at 12.21.56.png';
+import Sum from '../../../add_FILL0_wght400_GRAD0_opsz48.svg'
+import PodPic2 from '../../../Render para medidas.40.png'
+import PodPic3 from '../../../Render Tub + Tapa blanca.jpg'
+
+
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Pod1() {
     const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
+    const [showEspecificaciones, setShowEspecificaciones] = useState(false);
+    const [showEnvio, setShowEnvio] = useState(false);
+    const [showPrecauciones, setShowPrecauciones] = useState(false);
 
     const handleLogoClick = () => {
-        window.location.href = window.location.origin + window.location.pathname;
+        window.location.href = 'http://localhost:5173/';
     };
 
     const openModal = () => {
@@ -18,6 +29,25 @@ function Pod1() {
     const closeModal = () => {
         setShowModal(false);
     };
+
+    const toggleEspecificaciones = () => {
+        setShowEspecificaciones(!showEspecificaciones);
+        setShowEnvio(false);
+        setShowPrecauciones(false);
+    };
+
+    const toggleEnvio = () => {
+        setShowEnvio(!showEnvio);
+        setShowEspecificaciones(false);
+        setShowPrecauciones(false);
+    };
+
+    const togglePrecauciones = () => {
+        setShowPrecauciones(!showPrecauciones);
+        setShowEspecificaciones(false);
+        setShowEnvio(false);
+    };
+
     return (
         <div>
             <header>
@@ -34,24 +64,16 @@ function Pod1() {
                 <nav>
                     <ul>
                         <li>
-
                             BENEFICIOS
-
                         </li>
                         <li>
-
                             PODS
-
                         </li>
                         <li onClick={openModal}>
-
                             SOBRE NOSOTROS
-
                         </li>
                         <li>
-
                             INFORMACIÓN DE USO
-
                         </li>
                     </ul>
                 </nav>
@@ -66,32 +88,79 @@ function Pod1() {
 
                                 Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando el instrumento vital para empezar en este camino.
 
-                                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada, donde juntos podemos crear un impacto positivo en el mundo del bienestar y marcar la diferencia en la vida de las personas.</p>
-
+                                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada.
+                            </p>
                             <img src={Cross} id="Cross" onClick={closeModal}></img>
-
                         </div>
                     </div>
                 )}
             </header>
 
 
+
             <section id="Contenido">
+
+
                 <div id="Carousel">
-                    <img id="PodPic" src={PodPic}></img>
+                    <Carousel showArrows={false} showThumbs={true} infiniteLoop={true} showStatus={false} showIndicators={false}>
+                        <div id="PodPic">
+                            <img id="PodPic" src={PodPic} alt="Product Image" />
+                        </div>
+                        <div id="PodPic">
+                            <img id="PodPic" src={PodPic2} alt="Product Image" />
+                        </div>
+                        <div id="PodPic">
+                            <img id="PodPic" src={PodPic3} alt="Product Image" />
+                        </div>
+
+                    </Carousel>
                 </div>
+
+
+
+
                 <div id="PodInfo">
-                    <p id="PodTitle"> Ice Pod + Covertor </p>
-                    <p id="PodPrecio"> $180.00 USD </p>
-                    <p id="PodSubtitle"> Tu propio Baño de Hielo Portátil </p>
-                    <p id="PodParagraph"> Descubrí el Polar Ice Pod, el baño de hielo portátil definitivo para la recuperación profesional. Diseñado con precisión y pensado para brindarte una experiencia única de terapia con agua fría. Con el Polar Ice Pod, podrás disfrutar de los beneficios de la terapia con agua fría en cualquier momento y lugar. Su diseño compacto y portátil te permite llevarlo contigo a donde vayas, ya sea en interiores o al aire libre. Sumérgete en un baño de hielo revitalizante y potencia tu recuperación con el Polar Ice Pod. </p>
-                    <button id="Agregar"> Agregar al Carrito </button>
+                    <p id="PodTitle">Ice Pod + Covertor</p>
+                    <p id="PodPrecio">$180.00 USD</p>
+                    <p id="PodSubtitle">Tu propio Baño de Hielo Portátil</p>
+                    <p id="PodParagraph">
+                        Descubrí el Polar Ice Pod, el baño de hielo portátil definitivo para la recuperación profesional. Diseñado con precisión y pensado para brindarte una experiencia única de terapia con agua fría. Con el Polar Ice Pod, podrás disfrutar de los beneficios de la terapia con agua fría en cualquier momento y lugar. Su diseño compacto y portátil te permite llevarlo contigo a donde vayas, ya sea en interiores o al aire libre. Sumérgete en un baño de hielo revitalizante y potencia tu recuperación con el Polar Ice Pod.
+                    </p>
+                    <button id="Agregar">Agregar al Carrito</button>
+                    <div id="Info">
+                        <p className="InfoItem" onClick={toggleEspecificaciones}>
+                            Especificaciones
+                            <img id="Sum" src={Sum} />
+                        </p>
+                        {showEspecificaciones && (
+                            <p className="InfoText">
+                                Aquí van las especificaciones del producto...
+
+                            </p>
+                        )}
+                        <p className="InfoItem" onClick={toggleEnvio}>
+                            Envío
+                            <img id="Sum" src={Sum} />
+                        </p>
+                        {showEnvio && (
+                            <p className="InfoText">
+                                Aquí va la información de envío...
+                            </p>
+                        )}
+                        <p className="InfoItem" onClick={togglePrecauciones}>
+                            Precauciones
+                            <img id="Sum" src={Sum} />
+                        </p>
+                        {showPrecauciones && (
+                            <p className="InfoText">
+                                Aquí van las precauciones de uso...
+                            </p>
+                        )}
+                    </div>
                 </div>
-
             </section>
-
         </div>
-    )
+    );
 }
 
-export default Pod1
+export default Pod1;

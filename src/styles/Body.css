@@ -12,9 +12,10 @@
 
 #BodyContainer {
     height: 100%;
-    width: 100%;
+    width: 102%;
     margin: 0;
     padding: 0;
+    background-color: white;
 
 }
 
@@ -63,7 +64,7 @@
 #ImgTitle {
     height: 150%;
     margin-bottom: -20%;
-    margin-left: 10%;
+    margin-left: 15%;
     animation: fade-in 3s ease-in-out;
 }
 
@@ -113,7 +114,7 @@
     flex-direction: column;
     align-items: center;
     /* Center the content vertically */
-    margin-top: 20%;
+    margin-top: 15%;
     font-family: 'CustomFont', sans-serif;
 }
 
@@ -240,7 +241,7 @@
 
 
 #Products {
-    margin-top: 10%;
+
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -411,7 +412,9 @@
     padding-left: 2.35%;
     margin-bottom: 10%;
     margin-left: 5%;
+    position: sticky;
 }
+
 
 .faq-answer {
     display: none;
@@ -421,7 +424,15 @@
     height: fit-content;
     margin-left: 5%;
     margin-right: 5%;
-    width: 50%;
+    width: 90%;
+    /* Adjusted width */
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* Added transition */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    /* Added padding */
 }
 
 
@@ -432,7 +443,10 @@
 
 .faq-question.active .faq-answer {
     display: block;
-    width: 90%;
+    max-height: 1000px;
+    /* Adjust to a suitable value */
+    opacity: 1;
+
 }
 
 
@@ -447,9 +461,9 @@
     align-items: center;
     flex-direction: column;
     background-color: #121212;
-    margin-top: 10%;
+
     z-index: 1;
-    width: 106%;
+    width: 104.5%;
     position: relative;
     left: -3%;
     font-family: 'CustomFont', sans-serif;

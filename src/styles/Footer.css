@@ -24,7 +24,6 @@ footer {
     flex-direction: row;
     opacity: 0;
     padding-top: 2%;
-    margin-bottom: 5%;
 }
 
 #FooterContainer.animate-footer #FooterLinks {
@@ -69,28 +68,11 @@ footer {
     position: relative;
 }
 
-
-#WppLogo {
-    position: absolute;
-    width: 30%;
-    margin-right: 1%;
-    top: -10%;
-    left: -40%;
+.footer-column li a {
+    text-decoration: none;
 }
 
-#MailLogo {
-    position: absolute;
-    width: 10%;
-    top: -10%;
-    left: -12%;
-}
 
-#PhoneLogo {
-    position: absolute;
-    width: 30%;
-    top: -10%;
-    left: -35%;
-}
 
 #FooterInfo {
     display: flex;
@@ -118,4 +100,49 @@ footer {
 .footer-column li:hover {
     transform: scale(110%);
     cursor: pointer;
+}
+
+#ContactForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#ContactForm label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#ContactForm input,
+#ContactForm textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#ContactForm textarea {
+    resize: vertical;
+}
+
+#ContactForm button {
+    background-color: rgb(0, 170, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 110%;
+}
+
+#ContactForm button:hover {
+    background-color: rgb(0, 136, 204);
+}
+
+#ContactForm p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
 }

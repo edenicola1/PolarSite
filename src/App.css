@@ -1,10 +1,5 @@
 #root {
   margin: 0 auto;
   text-align: center;
-}
-
-.footer-container {
-  position: relative;
-  margin-top: 560vh;
-  /* Adjust the margin-top value to create space between the body and footer */
+  background-color: white;
 }
