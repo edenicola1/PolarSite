@@ -131,6 +131,7 @@ nav li:hover::before {
 
 #Carousel {
     width: 40%;
+    margin-top: 4%;
 }
 
 #PodInfo {
@@ -183,7 +184,7 @@ nav li:hover::before {
 #PodParagraph {
     font-size: 0.8vw;
     line-height: 2;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     width: 57%;
     color: #888;
 }
@@ -224,4 +225,100 @@ nav li:hover::before {
     position: absolute;
     left: 94%;
     top: -5%;
+}
+
+
+
+#ContactModal {
+    position: fixed;
+    margin-top: 3%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.ContactModalContent {
+    background-color: #121212;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+#ContactModalTitle {
+    font-size: 5vw;
+    font-weight: bold;
+    margin-top: 5%;
+    color: white;
+    margin-bottom: 0%;
+}
+
+#ContactModalText {
+    font-size: 1.5vw;
+    color: white;
+    text-align: justify;
+    padding: 3%;
+
+}
+
+#ContactCross {
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    filter: brightness(0) invert(1);
+}
+
+#ContactForm1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#ContactForm1 label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#ContactForm1 input,
+#ContactForm1 textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#ContactForm1 textarea {
+    resize: vertical;
+}
+
+#ContactForm1 button {
+    background-color: rgb(0, 170, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10%;
+    width: 105%;
+}
+
+#ContactForm1 button:hover {
+    background-color: rgb(0, 136, 204);
+}
+
+#ContactForm1 p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
 }

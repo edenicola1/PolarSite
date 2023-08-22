@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../../styles/Body.css";
-import Render from "../../../Banner Web Principal Corrección.png";
+import Render from "../../../Render black border splash.jpg";
 import ImgTitle from "../../../Logotype 1-01.png";
-import BannerBeneficios from "../../../Banner web beneficios.jpg";
+import BannerBeneficios from "../../../RENDER BENEFICIOS black border with colours.jpg";
 import LogoMejora from "../../../icon mejora de rendimiento.png";
 import LogoRec from "../../../icon recuperación rápida.png";
 import LogoRes from "../../../Icon Aumento Resistencia-01.png";
@@ -24,10 +24,44 @@ import Foto3 from "../../../the-ice-pod.webp"
 
 import Gif from "../../../Index-of-infograf2017-08-moonphasesimg.gif"
 
+import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg';
+import emailjs from 'emailjs-com';
+
 
 function Body() {
-
+    const [showContactModal, setShowContactModal] = useState(false)
     const [activeQuestion, setActiveQuestion] = useState(null);
+
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [status, setStatus] = useState('');
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_yzzokmc', 'template_i3a8wtm', e.target, 'yVNkcsbGHPpUpoBGc')
+            .then((result) => {
+                console.log(result.text);
+                setStatus('Mail enviado exitosamente!');
+            })
+            .catch((error) => {
+                console.error(error);
+                setStatus('Error al enviar mail...');
+            });
+    };
+
+
+    const openContactModal = () => {
+        setShowContactModal(true)
+    }
+
+    const closeContactModal = () => {
+        setShowContactModal(false)
+    }
+
 
     const handleQuestionClick = (questionIndex) => {
         setActiveQuestion((prevQuestionIndex) =>
@@ -209,6 +243,13 @@ function Body() {
                 </div>
             </section>
 
+            <div class="moving-button-container">
+                <button class="moving-button" onClick={openContactModal}> CONTACTANOS PARA MÁS INFORMACIÓN </button>
+
+            </div>
+            {console.log("showContactModal:", showContactModal)}
+
+
             <section id="FAQs">
                 <p id="FAQsTitle" className="hide">INFORMACIÓN DE USO</p>
                 <div id="Preguntas" className="hide">
@@ -219,9 +260,10 @@ function Body() {
                         >
                             <p id="FAQsPregunta">¿Cuánto tiempo debería durar cada inmersión en frío?</p>
                             <div className="faq-answer">
-                                <p>Lo ideal es permanecer en agua fría durante tres a ocho minutos. La terapia con agua fría funciona mejor con la combinación adecuada de tiempo y temperatura. Cada persona es diferente y algunas pueden tolerar temperaturas más bajas.</p>
+                                <span>Lo ideal es permanecer en agua fría durante tres a ocho minutos. La terapia con agua fría funciona mejor con la combinación adecuada de tiempo y temperatura. Cada persona es diferente y algunas pueden tolerar temperaturas más bajas.</span>
                             </div>
                         </div>
+
 
                         <div className={`faq-question ${activeQuestion === 1 ? 'active' : ''}`} onClick={() => handleQuestionClick(1)}>
                             <p id="FAQsPregunta">¿Cuánta cantidad de hielo es necesaria?</p>
@@ -283,6 +325,29 @@ function Body() {
                     <img src={IgLogo} id="IgLogo" alt="Instagram Logo" className="scaled-image" />
                 </a>
             </section>
+            {showContactModal && (
+                <div id="ContactModal">
+                    <div className="ContactModalContent">
+                        <p id="ContactModalTitle">Contactanos</p>
+                        <p id="ContactModalText">
+                            <form onSubmit={sendEmail} id="ContactForm1">
+                                <label htmlFor="name">Nombre:</label>
+                                <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+
+                                <label htmlFor="email">Email:</label>
+                                <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+
+                                <label htmlFor="message">Mensaje:</label>
+                                <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="7" required />
+
+                                <button type="submit" id="ContactButton">Enviar</button>
+                            </form>
+                            <p>{status}</p>
+                        </p>
+                        <img src={Cross} id="ContactCross" onClick={closeContactModal}></img>
+                    </div>
+                </div>
+            )}
 
         </div>
     )

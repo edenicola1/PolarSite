@@ -7,6 +7,7 @@ import PodPic from '../../../Screenshot 2023-06-27 at 12.21.56.png';
 import Sum from '../../../add_FILL0_wght400_GRAD0_opsz48.svg'
 import PodPic2 from '../../../Render para medidas.40.png'
 import PodPic3 from '../../../Render Tub + Tapa blanca.jpg'
+import emailjs from 'emailjs-com';
 
 
 import { Carousel } from 'react-responsive-carousel';
@@ -14,9 +15,31 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Pod1() {
     const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
+    const [showContactModal, setShowContactModal] = useState(false)
     const [showEspecificaciones, setShowEspecificaciones] = useState(false);
     const [showEnvio, setShowEnvio] = useState(false);
     const [showPrecauciones, setShowPrecauciones] = useState(false);
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [status, setStatus] = useState('');
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_yzzokmc', 'template_i3a8wtm', e.target, 'yVNkcsbGHPpUpoBGc')
+            .then((result) => {
+                console.log(result.text);
+                setStatus('Mail enviado exitosamente!');
+            })
+            .catch((error) => {
+                console.error(error);
+                setStatus('Error al enviar mail...');
+            });
+    };
+
 
     const handleLogoClick = () => {
         window.location.href = 'http://localhost:5173/';
@@ -24,10 +47,20 @@ function Pod1() {
 
     const openModal = () => {
         setShowModal(true);
+
     };
+
+    const openContactModal = () => {
+        setShowContactModal(true)
+    }
+
+    const closeContactModal = () => {
+        setShowContactModal(false)
+    }
 
     const closeModal = () => {
         setShowModal(false);
+
     };
 
     const toggleEspecificaciones = () => {
@@ -126,7 +159,7 @@ function Pod1() {
                     <p id="PodParagraph">
                         Descubrí el Polar Ice Pod, el baño de hielo portátil definitivo para la recuperación profesional. Diseñado con precisión y pensado para brindarte una experiencia única de terapia con agua fría. Con el Polar Ice Pod, podrás disfrutar de los beneficios de la terapia con agua fría en cualquier momento y lugar. Su diseño compacto y portátil te permite llevarlo contigo a donde vayas, ya sea en interiores o al aire libre. Sumérgete en un baño de hielo revitalizante y potencia tu recuperación con el Polar Ice Pod.
                     </p>
-                    <button id="Agregar">Agregar al Carrito</button>
+                    <button id="Agregar" onClick={openContactModal}> Contactanos </button>
                     <div id="Info">
                         <p className="InfoItem" onClick={toggleEspecificaciones}>
                             Especificaciones
@@ -158,6 +191,30 @@ function Pod1() {
                         )}
                     </div>
                 </div>
+
+                {showContactModal && (
+                    <div id="ContactModal">
+                        <div className="ContactModalContent">
+                            <p id="ContactModalTitle">Contactanos</p>
+                            <p id="ContactModalText">
+                                <form onSubmit={sendEmail} id="ContactForm1">
+                                    <label htmlFor="name">Nombre:</label>
+                                    <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+
+                                    <label htmlFor="email">Email:</label>
+                                    <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+
+                                    <label htmlFor="message">Mensaje:</label>
+                                    <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="5" required />
+
+                                    <button type="submit" id="ContactButton">Enviar</button>
+                                </form>
+                                <p>{status}</p>
+                            </p>
+                            <img src={Cross} id="ContactCross" onClick={closeContactModal}></img>
+                        </div>
+                    </div>
+                )}
             </section>
         </div>
     );
