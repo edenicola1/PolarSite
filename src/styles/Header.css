@@ -86,7 +86,7 @@ header {
 }
 
 .nav-links.scroll-left {
-    transform: translateX(-35%);
+    transform: translateX(-30%);
     /* Adjust the value as per your requirement */
     font-size: 1.2vw;
 }

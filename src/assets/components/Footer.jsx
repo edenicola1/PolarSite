@@ -75,9 +75,11 @@ const Footer = () => {
                 <div className="footer-column">
                     <h3>Shop</h3>
                     <ul>
-                        <li>Pod de inmersión en frío</li>
-                        <li>Pod de inmersión en frío + Covertor</li>
-                        <li>Pod de inmersión en frío Completo</li>
+                        <li><a href="/icepod">Pod de inmersión en frío</a></li>
+
+                        <li><a href="/icepodycovertor">Pod de inmersión en frío + Covertor</a></li>
+                        <li><a href="/icepodycovertorymochila">Pod de inmersión en frío Completo</a></li>
+
                     </ul>
                 </div>
                 <div className="footer-column">

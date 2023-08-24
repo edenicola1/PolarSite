@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import Logo from '../../../Logotype 2-02.png';
 import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg';
-import "../../styles/Pod1.css";
+import "../../styles/IcePod.css";
 import PodPic from '../../../Screenshot 2023-06-27 at 12.21.56.png';
 import Sum from '../../../add_FILL0_wght400_GRAD0_opsz48.svg'
 import PodPic2 from '../../../Render para medidas.40.png'
@@ -96,17 +96,23 @@ function Pod1() {
                 {/* Navigation Links */}
                 <nav>
                     <ul>
-                        <li>
-                            BENEFICIOS
+                        <li> <a href="/icepod">
+                            ICE POD
+                        </a>
                         </li>
-                        <li>
-                            PODS
+
+                        <li> <a href="/icepodycovertor">
+                            ICE POD + COVERTOR
+                        </a>
                         </li>
-                        <li onClick={openModal}>
-                            SOBRE NOSOTROS
+
+                        <li > <a href="/icepodycovertorymochila">
+                            ICE POD COMPLETO
+                        </a>
                         </li>
-                        <li>
-                            INFORMACIÓN DE USO
+
+                        <li onClick={openContactModal}>
+                            CONTACTO
                         </li>
                     </ul>
                 </nav>
@@ -153,7 +159,7 @@ function Pod1() {
 
 
                 <div id="PodInfo">
-                    <p id="PodTitle">Ice Pod + Covertor</p>
+                    <p id="PodTitle">Ice Pod</p>
                     <p id="PodPrecio">$180.00 USD</p>
                     <p id="PodSubtitle">Tu propio Baño de Hielo Portátil</p>
                     <p id="PodParagraph">
@@ -177,7 +183,7 @@ function Pod1() {
                         </p>
                         {showEnvio && (
                             <p className="InfoText">
-                                Aquí va la información de envío...
+                                Envíos a todo el país coordinando previamente.
                             </p>
                         )}
                         <p className="InfoItem" onClick={togglePrecauciones}>
@@ -195,7 +201,7 @@ function Pod1() {
                 {showContactModal && (
                     <div id="ContactModal">
                         <div className="ContactModalContent">
-                            <p id="ContactModalTitle">Contactanos</p>
+                            <p id="ContactModalTitle">CONTACTANOS</p>
                             <p id="ContactModalText">
                                 <form onSubmit={sendEmail} id="ContactForm1">
                                     <label htmlFor="name">Nombre:</label>

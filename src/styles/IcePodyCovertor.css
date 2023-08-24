@@ -122,16 +122,15 @@ nav li:hover::before {
 
 #Contenido {
     display: flex;
-    align-items: center;
     justify-content: center;
     font-family: 'CustomFont', sans-serif;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: 10%;
 }
 
 #Carousel {
     width: 40%;
-    margin-top: 4%;
+    margin-top: 9%;
 }
 
 #PodInfo {
@@ -151,15 +150,15 @@ nav li:hover::before {
     font-family: 'CustomFont-Bold', sans-serif;
 }
 
-#PodPrecio {
+#PodPrecio1 {
     font-size: 1vw;
     color: #888;
     margin-bottom: 2%;
     position: relative;
 }
 
-#PodPrecio::before {
-    content: "$180.00 USD";
+#PodPrecio1::before {
+    content: "$200.00 USD";
     position: absolute;
     left: 0;
     top: 50%;
@@ -168,8 +167,8 @@ nav li:hover::before {
     text-decoration: line-through;
 }
 
-#PodPrecio::after {
-    content: "$150.00 USD";
+#PodPrecio1:after {
+    content: "$170.00 USD";
     color: #000;
     margin-left: 1%;
 }
@@ -249,10 +248,11 @@ nav li:hover::before {
     border-radius: 5px;
     text-align: center;
     position: relative;
+    width: 40%;
 }
 
 #ContactModalTitle {
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: bold;
     margin-top: 5%;
     color: white;

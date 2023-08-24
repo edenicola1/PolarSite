@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../neue-june/Matt Chansky - Neue June Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CustomFont-Bold';
+    src: url('../neue-june/Matt Chansky - Neue June Bold.otf') format('opentype');
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #121212;
+    z-index: 9999;
+    font-family: 'CustomFont', sans-serif;
+}
+
+#HeaderLogo {
+    width: 12%;
+    height: 180%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5%;
+    margin-left: -43%;
+    font-size: 1.1vw;
+    color: white;
+    cursor: pointer;
+}
+
+nav li {
+    position: relative;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+nav li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+nav li:hover {
+    color: white;
+}
+
+nav li:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+
+
+#Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.ModalContent {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 70%;
+    max-height: 80%;
+    text-align: center;
+    position: relative;
+}
+
+#ModalTitle {
+    font-size: 4vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#ModalText {
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    color: white;
+    text-align: justify;
+    padding: 3%;
+}
+
+
+#Cross {
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    filter: brightness(0) invert(1);
+}
+
+
+#Contenido {
+    display: flex;
+    justify-content: center;
+    font-family: 'CustomFont', sans-serif;
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+#Carousel {
+    width: 40%;
+    margin-top: 9%;
+}
+
+#PodInfo {
+    width: 50%;
+    text-align: justify;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+
+
+
+#PodTitle {
+    font-size: 3vw;
+    color: #121212;
+    margin-bottom: 2%;
+    font-family: 'CustomFont-Bold', sans-serif;
+}
+
+#PodPrecio2 {
+    font-size: 1vw;
+    color: #888;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+#PodPrecio2::before {
+    content: "$250.00 USD";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    text-decoration: line-through;
+}
+
+#PodPrecio2::after {
+    content: "$200.00 USD";
+    color: #000;
+    margin-left: 1%;
+}
+
+#PodSubtitle {
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin-bottom: 2%;
+    color: #121212;
+}
+
+#PodParagraph {
+    font-size: 0.8vw;
+    line-height: 2;
+    margin-bottom: 5%;
+    width: 57%;
+    color: #888;
+}
+
+#Agregar {
+    padding: 2% 4%;
+    font-size: 1vw;
+    background-color: #3b8ed6;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 35%;
+}
+
+#Info {
+    color: #121212;
+    height: fit-content;
+    margin-top: 5%;
+    border-top: 0.7px solid black;
+    width: 60%;
+}
+
+.InfoItem {
+    border-bottom: 0.7px solid black;
+    padding-bottom: 2%;
+    position: relative;
+    cursor: pointer;
+}
+
+.InfoItem:hover {
+    transform: scale(102%);
+}
+
+#Sum {
+    width: 5%;
+    opacity: 0.7;
+    position: absolute;
+    left: 94%;
+    top: -5%;
+}
+
+
+
+#ContactModal {
+    position: fixed;
+    margin-top: 3%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.ContactModalContent {
+    background-color: #121212;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    width: 40%;
+}
+
+#ContactModalTitle {
+    font-size: 3vw;
+    font-weight: bold;
+    margin-top: 5%;
+    color: white;
+    margin-bottom: 0%;
+}
+
+#ContactModalText {
+    font-size: 1.5vw;
+    color: white;
+    text-align: justify;
+    padding: 3%;
+
+}
+
+#ContactCross {
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    filter: brightness(0) invert(1);
+}
+
+#ContactForm1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#ContactForm1 label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#ContactForm1 input,
+#ContactForm1 textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#ContactForm1 textarea {
+    resize: vertical;
+}
+
+#ContactForm1 button {
+    background-color: rgb(0, 170, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10%;
+    width: 105%;
+}
+
+#ContactForm1 button:hover {
+    background-color: rgb(0, 136, 204);
+}
+
+#ContactForm1 p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}

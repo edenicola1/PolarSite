@@ -13,9 +13,9 @@ import LogoPlanta from "../../../icon Sistema inmunológico-01.png";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import Product1 from "../../../Polar + Tapa Blanca.png";
-import Product2 from "../../../Polar + 2 Tapas.png";
-import Product3 from "../../../Polar+2 Tapas+ bag.png";
+import Product1 from "../../../Mesa de trabajo 1 copia 2.png";
+import Product2 from "../../../Mesa de trabajo 1 copia.png";
+import Product3 from "../../../Mesa de trabajo 1.png";
 
 import IgLogo from "../../../instagram-logo-instagram-icon-transparent-free-png.webp";
 import Foto1 from "../../../DSC00329.webp";
@@ -205,40 +205,45 @@ function Body() {
                     <p id="BenefitsDescription">Los baños fríos aumentan la alerta mental y la concentración, lo que te ayudará a estar más presente y enfocado durante tus actividades.</p>
                     <img src={LogoPlanta} id="LogoBenefits"></img>
                     <p id="BenefitsTitle">Estimulación del sistema inmunológico</p>
-                    <p id="BenefitsDescription">La exposición regular al frío fortalece el sistema inmunológico, lo que te permite mantenerte saludable y resistir mejor a las enfermedades.</p>
+                    <p id="BenefitsDescription">La exposición regular al frío fortalece el sistema inmunológico, lo que te permite mantenerte saludable y adquirir mayor resistencia a distintos tipos de enfermedades.</p>
 
                 </div>
             </section>
 
             <section id="Products">
-                <p id="ProductsTitle" className="hide"> PRODUCTOS POLAR</p>
-                <p id="ProductsDescription" className="hide">Polar te ofrece los mejores productos de recuperación deportiva que no se encuentran en las tiendas tradicionales </p>
+                <p id="ProductsTitle" className="hide">  POLAR ICE PODS</p>
+                <p id="ProductsDescription" className="hide">Polar te ofrece los mejores productos en innovación deportiva que no se encuentran en las tiendas tradicionales </p>
                 <div id="ProductCarousel" >
                     <Carousel showArrows={true} showThumbs={false} infiniteLoop={true} showStatus={false} showIndicators={false}>
-                        <a href="/icepods">
+                        <a href="/icepod">
                             <div id="divProduct">
                                 <img src={Product1} alt="Image 1" id="fotoProduct1" />
                                 <div className="slide-legend">
-                                    <h3>Pod de inmersión en frío </h3>
+                                    <h3>Ice Pod de inmersión en frío </h3>
                                     {/* <p> $4000 </p> */}
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="/icepodycovertor">
+                            <div id="divProduct">
+                                <img src={Product2} alt="Image 2" id="fotoProduct2" />
+                                <a href="/icepodycovertor"></a>
+                                <div className="slide-legend">
+                                    <h3 id="ProductTitle">Ice Pod de inmersión en frío + Covertor</h3>
+                                    {/* <p>$5000 </p> */}
                                 </div>
                             </div>
                         </a>
-                        <div id="divProduct">
-                            <img src={Product2} alt="Image 2" id="fotoProduct2" />
-                            <div className="slide-legend">
-                                <h3 id="ProductTitle">Pod de inmersión en frío + Covertor</h3>
-                                {/* <p>$5000 </p> */}
+                        <a href="/icepodycovertorymochila">
+                            <div id="divProduct">
+                                <img src={Product3} alt="Image 3" id="fotoProduct3" />
+                                <div className="slide-legend">
+                                    <h3 id="ProductTitle">Ice Pod de inmersión en frío + Covertor + Mochila para transporte </h3>
+                                    {/* <p>$6000 </p> */}
+                                </div>
                             </div>
-                        </div>
-                        <div id="divProduct">
-                            <img src={Product3} alt="Image 3" id="fotoProduct3" />
-                            <div className="slide-legend">
-                                <h3 id="ProductTitle">Pod de inmersión en frío + Covertor + Mochila para transporte </h3>
-                                {/* <p>$6000 </p> */}
-                            </div>
-                        </div>
-
+                        </a>
                     </Carousel>
                 </div>
             </section>
@@ -254,57 +259,51 @@ function Body() {
                 <p id="FAQsTitle" className="hide">INFORMACIÓN DE USO</p>
                 <div id="Preguntas" className="hide">
                     <div id="Preguntas1">
-                        <div
-                            className={`faq-question ${activeQuestion === 0 ? 'active' : ''}`}
-                            onClick={() => handleQuestionClick(0)}
-                        >
+                        <div className={`faq-question ${activeQuestion === 0 ? 'active' : ''}`} onClick={() => handleQuestionClick(0)}>
                             <p id="FAQsPregunta">¿Cuánto tiempo debería durar cada inmersión en frío?</p>
-                            <div className="faq-answer">
+                            <div className={`faq-answer ${activeQuestion === 0 ? 'active' : ''}`}>
                                 <span>Lo ideal es permanecer en agua fría durante tres a ocho minutos. La terapia con agua fría funciona mejor con la combinación adecuada de tiempo y temperatura. Cada persona es diferente y algunas pueden tolerar temperaturas más bajas.</span>
                             </div>
                         </div>
 
-
                         <div className={`faq-question ${activeQuestion === 1 ? 'active' : ''}`} onClick={() => handleQuestionClick(1)}>
                             <p id="FAQsPregunta">¿Cuánta cantidad de hielo es necesaria?</p>
-                            <div className="faq-answer">
-                                <p>Recomendamos agregar entre 5 y 10 kg de hielo al Pod por sesión. La cantidad de hielo necesaria depende de lo fría que desees que esté. Además, dependiendo de la estación del año, es posible que sea necesario agregar menos hielo.
-                                    Dado que el pod está aislado, mantendrá el agua fría durante varios días, por lo que es posible que no tengas que agregar tanto hielo después de la primera vez.</p>
+                            <div className={`faq-answer ${activeQuestion === 1 ? 'active' : ''}`}>
+                                <p>Recomendamos agregar entre 5 y 10 kg de hielo al Ice Pod por sesión. La cantidad de hielo necesaria depende de lo fría que desees que esté.
+                                    Los materiales aislantes del Ice Pod contribuyen a mantener el agua fría durante varios días, por lo que es posible que no tengas que agregar tanto hielo después de la primera vez.</p>
                             </div>
                         </div>
 
                         <div className={`faq-question ${activeQuestion === 2 ? 'active' : ''}`} onClick={() => handleQuestionClick(2)}>
                             <p id="FAQsPregunta">¿Cuál es la temperatura ideal para la inmersión?</p>
-                            <div className="faq-answer">
+                            <div className={`faq-answer ${activeQuestion === 2 ? 'active' : ''}`}>
                                 <p>Para las primeras sesiones, comenzar a una temperatura de alrededor de 15°C, y luego ir bajando gradualmente la temperatura cada sesión. De esta manera, tu cuerpo se irá acostumbrando al frío.</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="Preguntas2">
-
                         <div className={`faq-question ${activeQuestion === 3 ? 'active' : ''}`} onClick={() => handleQuestionClick(3)}>
-                            <p id="FAQsPregunta">¿Cómo se llena el Pod?</p>
-                            <div className="faq-answer">
-                                <p>El Pod viene con una llave en la parte inferior para llenar. Ahí se conecta una manguera y se llena el Pod. Para sacarle el agua, simplemente se abre la llave.</p>
+                            <p id="FAQsPregunta">¿Cómo se llena el Ice Pod?</p>
+                            <div className={`faq-answer ${activeQuestion === 3 ? 'active' : ''}`}>
+                                <p>El Ice Pod viene con una llave en la parte inferior para llenar. Ahí se conecta una manguera y se llena el Ice Pod. Para sacarle el agua, simplemente se abre la llave.</p>
                             </div>
                         </div>
 
                         <div className={`faq-question ${activeQuestion === 4 ? 'active' : ''}`} onClick={() => handleQuestionClick(4)}>
-                            <p id="FAQsPregunta">¿Cada cuánto tiempo cambio el agua del Pod?</p>
-                            <div className="faq-answer">
-                                <p>Para mantener el agua limpia durante períodos, lo mejor es agregar alrededor de 1kg de sal marina. Con esto, el agua del Pod puede durar hasta un mes sin ser cambiada.
-                                    Si no se le agrega sal, recomendamos limpiar el pod cada tres a cinco sesiones de inmersión.</p>
+                            <p id="FAQsPregunta">¿Cada cuánto tiempo cambio el agua del Ice Pod?</p>
+                            <div className={`faq-answer ${activeQuestion === 4 ? 'active' : ''}`}>
+                                <p>Para mantener el agua limpia durante períodos, lo mejor es agregar alrededor de 1kg de sal marina. Con esto, el agua del Ice Pod puede durar hasta un mes sin ser cambiada.
+                                    Si no se le agrega sal, recomendamos limpiar el Ice Pod cada tres a cinco sesiones de inmersión.</p>
                             </div>
                         </div>
 
                         <div className={`faq-question ${activeQuestion === 5 ? 'active' : ''}`} onClick={() => handleQuestionClick(5)}>
-                            <p id="FAQsPregunta">¿Se puede instalar a la intemperie y dejarlo ahí?</p>
-                            <div className="faq-answer">
-                                <p>El material con el que se hacen los Pods hace que sean muy resistentes a las temperaturas y las condiciones exteriores. Además, el cobertor es perfecto para cuando no se esté usando y se desee dejarlo afuera.</p>
+                            <p id="FAQsPregunta">¿Se puede instalar a la intemperie?</p>
+                            <div className={`faq-answer ${activeQuestion === 5 ? 'active' : ''}`}>
+                                <p>El material con el que se hacen los Ice Pods hace que sean muy resistentes a las temperaturas y las condiciones exteriores. Además, el cobertor es perfecto para cuando no se esté usando y se desee dejarlo afuera.</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -328,7 +327,7 @@ function Body() {
             {showContactModal && (
                 <div id="ContactModal">
                     <div className="ContactModalContent">
-                        <p id="ContactModalTitle">Contactanos</p>
+                        <p id="ContactModalTitle">CONTACTANOS</p>
                         <p id="ContactModalText">
                             <form onSubmit={sendEmail} id="ContactForm1">
                                 <label htmlFor="name">Nombre:</label>

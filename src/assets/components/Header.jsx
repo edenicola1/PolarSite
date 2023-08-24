@@ -71,7 +71,7 @@ const Header = ({ background }) => {
                     </li>
                     <li
                         onClick={(event) => scrollToSection(event, 'Products')}>
-                        PODS
+                        ICE PODS
 
                     </li>
                     <li

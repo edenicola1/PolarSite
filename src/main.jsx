@@ -5,7 +5,9 @@ import { RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx'
 import './index.css'
-import IcePods from './assets/components/Pod1.jsx'
+import IcePod from './assets/components/IcePod.jsx'
+import IcePodyCovertor from './assets/components/IcePodyCovertor.jsx'
+import IcePodyCovertoryMochila from './assets/components/IcePodyCovertoryMochila.jsx'
 
 
 const router = createBrowserRouter([
@@ -14,9 +16,17 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/icepods",
-    element: <IcePods />,
+    path: "/icepod",
+    element: <IcePod />,
   },
+  {
+    path: "/icepodycovertor",
+    element: <IcePodyCovertor />
+  },
+  {
+    path: "/icepodycovertorymochila",
+    element: <IcePodyCovertoryMochila />
+  }
 
 
 ]);
