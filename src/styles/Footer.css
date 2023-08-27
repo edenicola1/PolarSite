@@ -107,11 +107,14 @@ footer {
     flex-direction: column;
     max-width: 400px;
     margin: auto;
+    margin-right: 29%;
 }
 
 #ContactForm label {
     font-weight: bold;
     margin-bottom: 8px;
+    font-size: 1vw;
+    text-align: center;
 }
 
 #ContactForm input,

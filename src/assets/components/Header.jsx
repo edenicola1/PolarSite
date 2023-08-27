@@ -37,7 +37,7 @@ const Header = ({ background }) => {
     };
 
     const handleLogoClick = () => {
-        window.location.href = window.location.origin + window.location.pathname;
+        window.location.href = "/";
     };
 
     const openModal = () => {

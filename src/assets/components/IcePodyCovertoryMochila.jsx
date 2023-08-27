@@ -42,10 +42,10 @@ function IcePodyCovertoryMochila() {
     };
 
 
-    const handleLogoClick = () => {
-        window.location.href = 'http://localhost:5173/';
-    };
 
+    const handleLogoClick = () => {
+        window.location.href = "/";
+    };
     const openModal = () => {
         setShowModal(true);
 

@@ -85,10 +85,9 @@ const Footer = () => {
                 <div className="footer-column">
                     <h3>Info</h3>
                     <ul>
-                        <li onClick={openModal}>  Sobre Nosotros</li>
 
-                        <li>Envíos & Devoluciones</li>
-                        <li>Términos & Condiciones</li>
+                        <li><a href="/enviosydevoluciones">Términos & Condiciones</a></li>
+                        <li> Manuales de Uso</li>
                     </ul>
                 </div>
                 <div className="footer-column">

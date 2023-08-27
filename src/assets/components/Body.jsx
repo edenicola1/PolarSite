@@ -252,7 +252,7 @@ function Body() {
                 <button class="moving-button" onClick={openContactModal}> CONTACTANOS PARA MÁS INFORMACIÓN </button>
 
             </div>
-            {console.log("showContactModal:", showContactModal)}
+
 
 
             <section id="FAQs">

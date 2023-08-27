@@ -8,6 +8,7 @@ import './index.css'
 import IcePod from './assets/components/IcePod.jsx'
 import IcePodyCovertor from './assets/components/IcePodyCovertor.jsx'
 import IcePodyCovertoryMochila from './assets/components/IcePodyCovertoryMochila.jsx'
+import EyD from "./assets/components/EyD.jsx"
 
 
 const router = createBrowserRouter([
@@ -26,7 +27,12 @@ const router = createBrowserRouter([
   {
     path: "/icepodycovertorymochila",
     element: <IcePodyCovertoryMochila />
+  },
+  {
+    path: "/enviosydevoluciones",
+    element: <EyD />
   }
+
 
 
 ]);
