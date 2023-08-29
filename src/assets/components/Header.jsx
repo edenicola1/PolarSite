@@ -48,6 +48,12 @@ const Header = ({ background }) => {
         setShowModal(false);
     };
 
+    const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setMobileMenuVisible(!mobileMenuVisible);
+    };
+
     return (
         <header style={{ backgroundColor: background }}>
             {/* Header Logo */}
@@ -61,31 +67,45 @@ const Header = ({ background }) => {
 
             {/* Navigation Links */}
             <nav>
-                <ul
-                    className={`nav-links ${scrollBackground ? 'black' : ''} ${scrollLeft ? 'scroll-left' : ''}`}
-                >
-                    <li
-                        onClick={(event) => scrollToSection(event, 'Benefits')}>
-                        BENEFICIOS
-
-                    </li>
-                    <li
-                        onClick={(event) => scrollToSection(event, 'Products')}>
-                        ICE PODS
-
-                    </li>
-                    <li
-                        onClick={openModal}>
-                        SOBRE NOSOTROS
-
-                    </li>
-                    <li
-                        onClick={(event) => scrollToSection(event, 'FAQs')}>
-                        INFORMACIÓN DE USO
-
-                    </li>
-                </ul>
+                {mobileMenuVisible ? (
+                    <ul className={`mobile-nav-links`}>
+                        <li onClick={(event) => scrollToSection(event, 'Benefits')}>
+                            BENEFICIOS
+                        </li>
+                        <li onClick={(event) => scrollToSection(event, 'Products')}>
+                            ICE PODS
+                        </li>
+                        <li onClick={openModal}>SOBRE NOSOTROS</li>
+                        <li onClick={(event) => scrollToSection(event, 'FAQs')}>
+                            INFORMACIÓN DE USO
+                        </li>
+                    </ul>
+                ) : (
+                    <ul
+                        className={`nav-links ${scrollBackground ? 'black' : ''} ${scrollLeft ? 'scroll-left' : ''
+                            }`}
+                    >
+                        <li onClick={(event) => scrollToSection(event, 'Benefits')}>
+                            BENEFICIOS
+                        </li>
+                        <li onClick={(event) => scrollToSection(event, 'Products')}>
+                            ICE PODS
+                        </li>
+                        <li onClick={openModal}>SOBRE NOSOTROS</li>
+                        <li onClick={(event) => scrollToSection(event, 'FAQs')}>
+                            INFORMACIÓN DE USO
+                        </li>
+                    </ul>
+                )}
             </nav>
+
+            <div className="burger-menu" onClick={toggleMobileMenu}>
+                <div className={`bar ${mobileMenuVisible ? 'active' : ''}`} />
+                <div className={`bar ${mobileMenuVisible ? 'active' : ''}`} />
+                <div className={`bar ${mobileMenuVisible ? 'active' : ''}`} />
+            </div>
+
+
 
             {/* Modal */}
             {showModal && (

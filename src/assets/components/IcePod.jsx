@@ -88,7 +88,7 @@ function Pod1() {
                 {/* Header Logo */}
                 <img
                     src={Logo}
-                    id="HeaderLogo"
+                    id="HeaderLogo1"
                     alt="Logo"
                     onClick={handleLogoClick}
                     style={{ cursor: 'pointer' }}

@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import "../../styles/Body.css";
 import Render from "../../../Render black border splash.jpg";
 import ImgTitle from "../../../Logotype 1-01.png";
+import RenderMobile from "../../../Mesa de trabajo 1 copia 3.jpg";
 import BannerBeneficios from "../../../RENDER BENEFICIOS black border with colours.jpg";
+import BannerBeneficiosMobile from "../../../Mesa de trabajo 1 copia 4.jpg"
 import LogoMejora from "../../../icon mejora de rendimiento.png";
 import LogoRec from "../../../icon recuperación rápida.png";
 import LogoRes from "../../../Icon Aumento Resistencia-01.png";
@@ -163,9 +165,11 @@ function Body() {
         <div id="BodyContainer">
             <section id="Render">
                 <img src={Render} id="RenderImg" alt="Polar Banner"></img>
+                <img src={RenderMobile} id="RenderImgMobile" alt="Polar Banner"></img>
 
                 <div className="overlay">
                     <img src={ImgTitle} id="ImgTitle"></img>
+
                     <p id="PolarDescription">
                         Descubrí el poder de la <strong>inmersión</strong> en frío y experimentá una <strong>recuperación</strong> y un <strong>rendimiento</strong> óptimo.
                     </p>
@@ -180,8 +184,9 @@ function Body() {
 
             <section id="Benefits">
                 <img src={BannerBeneficios} id="BannerBeneficios"></img>
+                <img src={BannerBeneficiosMobile} id="BannerBeneficiosMobile"></img>
                 <div id="TitleandDescription">
-                    <p id="BeneficiosTitle" className="hide"> POR QUÉ HACER INMERSIÓN </p>
+                    <p id="BeneficiosTitle" className="hide"> ¿POR QUÉ HACER INMERSIÓN? </p>
                     <p id="BeneficiosDescription" className="hide"> Conocé los beneficios de esta innovación del rendimiento </p>
                 </div>
                 <div id="BenefitsLeft" className="hide">

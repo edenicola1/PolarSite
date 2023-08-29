@@ -112,7 +112,7 @@ const Footer = () => {
             <section id="FooterInfo">
 
                 <img src={Logo} id="FooterLogo" alt="Logo"></img>
-                <p id="CompanyInfo">© 2023, Polar. - N⁰ empresa: 0000008237547</p>
+                <p id="CompanyInfo">© 2023, Polar. - Todos los derechos reservados.</p>
             </section>
 
             {/* {showModal && (
