@@ -322,3 +322,120 @@ nav li:hover::before {
     font-size: 14px;
     color: #333;
 }
+
+@media only screen and (max-width: 768px) {
+
+
+    #ContactModal {
+        position: fixed;
+        z-index: 1000;
+        /* Adjust this value as needed */
+        top: 50%;
+        /* Center vertically */
+        left: 100%;
+        /* Center horizontally */
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(5px);
+        margin-left: 50%;
+        font-family: 'CustomFont', sans-serif;
+    }
+
+    .ContactModalContent {
+        background-color: #121212;
+        padding-left: 10%;
+        padding-right: 10%;
+        border-radius: 5px;
+        text-align: center;
+        position: relative;
+    }
+
+    #ContactModalTitle {
+        font-size: 10vw;
+        font-weight: bold;
+        margin-top: 15%;
+        color: white;
+        margin-bottom: 0%;
+    }
+
+    #ContactModalText {
+        font-size: 4vw;
+        color: white;
+        text-align: justify;
+        padding: 3%;
+
+    }
+
+    #ContactCross {
+        width: 15%;
+        height: 15%;
+        cursor: pointer;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        filter: brightness(0) invert(1);
+    }
+
+    #ContactCross:hover {
+        transform: scale(1.2);
+        transform: rotate(90deg);
+    }
+
+    #ContactForm1 {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    #ContactForm1 label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        font-size: 4vw;
+    }
+
+    #ContactForm1 input,
+    #ContactForm1 textarea {
+        padding: 10px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    /* Add the desired font-family for input fields */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-family: 'CustomFont', sans-serif;
+        font-size: 3vw;
+        /* Replace with your font name */
+        /* Other existing styles for input fields */
+    }
+
+
+    #ContactForm1 textarea {
+        resize: vertical;
+    }
+
+    #ContactForm1 button {
+        background-color: rgb(0, 170, 255);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10%;
+        width: 110%;
+        font-size: 4vw;
+    }
+
+    #ContactForm1 button:hover {
+        background-color: rgb(0, 136, 204);
+    }
+
+    #ContactForm1 p {
+        margin-top: 10px;
+        font-size: 4vw;
+        color: #333;
+    }
+}

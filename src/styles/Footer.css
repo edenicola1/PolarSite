@@ -156,7 +156,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
     footer {
-        height: 120vh;
+        height: 127vh;
     }
 
 
@@ -227,6 +227,7 @@ footer {
         padding: 10%;
         margin-bottom: 20%;
         width: 30vw;
+        font-size: 3vw;
     }
 
     #ContactForm button {
@@ -236,7 +237,7 @@ footer {
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
-        width: 120%;
+        width: 105%;
     }
 
     #ContactForm button:hover {
@@ -264,11 +265,12 @@ footer {
         width: 50%;
         margin-bottom: -5%;
         margin-top: 5%;
-        margin-left: 5%;
+        margin-left: 0%;
 
     }
 
     #CompanyInfo {
-        margin-left: 5%;
+        margin-left: 0%;
     }
+
 }

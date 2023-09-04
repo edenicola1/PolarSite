@@ -2,11 +2,21 @@ import React, { useState, useEffect } from 'react';
 import '../../styles/Header.css';
 import Logo from '../../../Logotype 2-02.png';
 import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg'
+import Menu from '../../../menu_FILL0_wght400_GRAD0_opsz48.svg';
+import { Link } from 'react-router-dom';
 
-const Header = ({ background }) => {
+
+const Header = ({ background, dropdownBackground }) => {
     const [scrollBackground, setScrollBackground] = useState(false);
     const [scrollLeft, setScrollLeft] = useState(false);
     const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
+
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [headerVisible, setHeaderVisible] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,11 +25,27 @@ const Header = ({ background }) => {
             if (scrollTop > 0) {
                 setScrollBackground(true);
                 setScrollLeft(true);
+
             } else {
                 setScrollBackground(false);
                 setScrollLeft(false);
+
+            }
+
+            if (window.innerWidth <= 767) {
+                // For mobile devices
+                if (scrollTop > 0) {
+                    setHeaderVisible(true);
+                } else {
+                    setHeaderVisible(false);
+                }
+            } else {
+                // For computers
+                setHeaderVisible(true);
             }
         };
+
+        handleScroll();
 
         window.addEventListener('scroll', handleScroll);
 
@@ -48,14 +74,8 @@ const Header = ({ background }) => {
         setShowModal(false);
     };
 
-    const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
-
-    const toggleMobileMenu = () => {
-        setMobileMenuVisible(!mobileMenuVisible);
-    };
-
     return (
-        <header style={{ backgroundColor: background }}>
+        <header className={`${headerVisible ? '' : 'invisible-header'}`} style={{ backgroundColor: background }}>
             {/* Header Logo */}
             <img
                 src={Logo}
@@ -67,42 +87,36 @@ const Header = ({ background }) => {
 
             {/* Navigation Links */}
             <nav>
-                {mobileMenuVisible ? (
-                    <ul className={`mobile-nav-links`}>
-                        <li onClick={(event) => scrollToSection(event, 'Benefits')}>
-                            BENEFICIOS
-                        </li>
-                        <li onClick={(event) => scrollToSection(event, 'Products')}>
-                            ICE PODS
-                        </li>
-                        <li onClick={openModal}>SOBRE NOSOTROS</li>
-                        <li onClick={(event) => scrollToSection(event, 'FAQs')}>
-                            INFORMACIÓN DE USO
-                        </li>
-                    </ul>
-                ) : (
-                    <ul
-                        className={`nav-links ${scrollBackground ? 'black' : ''} ${scrollLeft ? 'scroll-left' : ''
-                            }`}
-                    >
-                        <li onClick={(event) => scrollToSection(event, 'Benefits')}>
-                            BENEFICIOS
-                        </li>
-                        <li onClick={(event) => scrollToSection(event, 'Products')}>
-                            ICE PODS
-                        </li>
-                        <li onClick={openModal}>SOBRE NOSOTROS</li>
-                        <li onClick={(event) => scrollToSection(event, 'FAQs')}>
-                            INFORMACIÓN DE USO
-                        </li>
-                    </ul>
-                )}
+                <ul
+                    className={`nav-links ${scrollBackground ? 'black' : ''} ${scrollLeft ? 'scroll-left' : ''
+                        }`}
+                >
+                    <li onClick={(event) => scrollToSection(event, 'Benefits')}>
+                        BENEFICIOS
+                    </li>
+                    <li onClick={(event) => scrollToSection(event, 'Products')}>
+                        ICE PODS
+                    </li>
+                    <li onClick={openModal}>SOBRE NOSOTROS</li>
+                    <li onClick={(event) => scrollToSection(event, 'FAQs')}>
+                        INFORMACIÓN DE USO
+                    </li>
+                </ul>
+
             </nav>
 
-            <div className="burger-menu" onClick={toggleMobileMenu}>
-                <div className={`bar ${mobileMenuVisible ? 'active' : ''}`} />
-                <div className={`bar ${mobileMenuVisible ? 'active' : ''}`} />
-                <div className={`bar ${mobileMenuVisible ? 'active' : ''}`} />
+            <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
+                <button id="DropdownButton" onClick={toggleDropdown}>
+                    <img src={Menu} alt="Menu" />
+                </button>
+                {showDropdown && (
+                    <div className="dropdown-content" style={{ backgroundColor: dropdownBackground }}>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Benefits')}> BENEFICIOS </button>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Products')}>ICE PODS</button>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={openModal}>SOBRE NOSOTROS</button>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'FAQs')}>INFORMACIÓN DE USO</button>
+                    </div>
+                )}
             </div>
 
 
@@ -127,5 +141,4 @@ const Header = ({ background }) => {
         </header>
     );
 };
-
 export default Header;

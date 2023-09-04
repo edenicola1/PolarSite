@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'; // Import Link
 import Logo from '../../../Logotype 2-02.png';
 import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg';
 import "../../styles/IcePodyCovertoryMochila.css";
-import PodPic from '../../../Screenshot 2023-06-27 at 12.21.56.png';
+import PodPic from '../../../Render Tub + Tapas + Mochilas 1080.1080.jpg';
 import Sum from '../../../add_FILL0_wght400_GRAD0_opsz48.svg'
 import PodPic2 from '../../../Render para medidas.40.png'
-import PodPic3 from '../../../Render Tub + Tapa blanca.jpg'
+
 import emailjs from 'emailjs-com';
 
 
@@ -146,12 +146,7 @@ function IcePodyCovertoryMochila() {
                         <div id="PodPic">
                             <img id="PodPic" src={PodPic} alt="Product Image" />
                         </div>
-                        <div id="PodPic">
-                            <img id="PodPic" src={PodPic2} alt="Product Image" />
-                        </div>
-                        <div id="PodPic">
-                            <img id="PodPic" src={PodPic3} alt="Product Image" />
-                        </div>
+
 
                     </Carousel>
                 </div>

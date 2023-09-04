@@ -11,6 +11,7 @@ import LogoRes from "../../../Icon Aumento Resistencia-01.png";
 import LogoMood from "../../../icon mood.png";
 import LogoMental from "../../../icon enfoque mental-01.png";
 import LogoPlanta from "../../../icon Sistema inmunológico-01.png";
+import LinEnd from "../../../line_end_FILL0_wght400_GRAD0_opsz24.svg"
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -212,6 +213,39 @@ function Body() {
                     <p id="BenefitsTitle">Estimulación del sistema inmunológico</p>
                     <p id="BenefitsDescription">La exposición regular al frío fortalece el sistema inmunológico, lo que te permite mantenerte saludable y adquirir mayor resistencia a distintos tipos de enfermedades.</p>
 
+                </div>
+
+                <div id="MobileBenefits">
+                    <div id="CajaBenefit">
+                        <img src={LinEnd} id="Linend"></img>
+                        <img src={LogoMejora} id="LogoBenefitsM"></img>
+                        <p id="BenefitsTitleM">Mejora de rendimiento</p>
+                    </div>
+                    <div id="CajaBenefit">
+                        <img src={LinEnd} id="Linend"></img>
+                        <img src={LogoRec} id="LogoBenefitsM"></img>
+                        <p id="BenefitsTitleM">Recuperación rápida</p>
+                    </div>
+                    <div id="CajaBenefit">
+                        <img src={LinEnd} id="Linend"></img>
+                        <img src={LogoRes} id="LogoBenefitsMR"></img>
+                        <p id="BenefitsTitleMR">Aumento de la resistencia</p>
+                    </div>
+                    <div id="CajaBenefit">
+                        <img src={LinEnd} id="Linend"></img>
+                        <img src={LogoMood} id="LogoBenefitsMM"></img>
+                        <p id="BenefitsTitleMM">Mejora del estado de ánimo</p>
+                    </div>
+                    <div id="CajaBenefit">
+                        <img src={LinEnd} id="Linend"></img>
+                        <img src={LogoMental} id="LogoBenefitsMP"></img>
+                        <p id="BenefitsTitleMP">Potenciación del enfoque mental</p>
+                    </div>
+                    <div id="CajaBenefit">
+                        <img src={LinEnd} id="Linend"></img>
+                        <img src={LogoPlanta} id="LogoBenefitsME"></img>
+                        <p id="BenefitsTitleMP">Estimulación del sistema inmunológico</p>
+                    </div>
                 </div>
             </section>
 

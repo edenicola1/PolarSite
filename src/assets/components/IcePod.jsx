@@ -3,22 +3,29 @@ import { Link } from 'react-router-dom'; // Import Link
 import Logo from '../../../Logotype 2-02.png';
 import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg';
 import "../../styles/IcePod.css";
-import PodPic from '../../../Screenshot 2023-06-27 at 12.21.56.png';
+import PodPic from '../../../Render Tub + Tapa negra 1080.1080.jpg';
 import Sum from '../../../add_FILL0_wght400_GRAD0_opsz48.svg'
-import PodPic2 from '../../../Render para medidas.40.png'
-import PodPic3 from '../../../Render Tub + Tapa blanca.jpg'
+
 import emailjs from 'emailjs-com';
+import Menu from '../../../menu_FILL0_wght400_GRAD0_opsz48.svg';
 
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-function Pod1() {
+const Pod1 = ({ dropdownBackground }) => {
     const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
     const [showContactModal, setShowContactModal] = useState(false)
     const [showEspecificaciones, setShowEspecificaciones] = useState(false);
     const [showEnvio, setShowEnvio] = useState(false);
     const [showPrecauciones, setShowPrecauciones] = useState(false);
+
+
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -134,9 +141,24 @@ function Pod1() {
                         </div>
                     </div>
                 )}
+
+
+
             </header>
 
-
+            <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
+                <button id="DropdownButton" onClick={toggleDropdown}>
+                    <img src={Menu} alt="Menu" />
+                </button>
+                {showDropdown && (
+                    <div className="dropdown-content" style={{ backgroundColor: dropdownBackground }}>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Benefits')}> BENEFICIOS </button>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Products')}>ICE PODS</button>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={openModal}>SOBRE NOSOTROS</button>
+                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'FAQs')}>INFORMACIÓN DE USO</button>
+                    </div>
+                )}
+            </div>
 
             <section id="Contenido">
 
@@ -146,12 +168,12 @@ function Pod1() {
                         <div id="PodPic">
                             <img id="PodPic" src={PodPic} alt="Product Image" />
                         </div>
-                        <div id="PodPic">
+                        {/* <div id="PodPic">
                             <img id="PodPic" src={PodPic2} alt="Product Image" />
                         </div>
                         <div id="PodPic">
                             <img id="PodPic" src={PodPic3} alt="Product Image" />
-                        </div>
+                        </div> */}
 
                     </Carousel>
                 </div>
