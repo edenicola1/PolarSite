@@ -75,9 +75,9 @@ const Header = ({ background, dropdownBackground }) => {
     };
 
     return (
-        <header className={`${headerVisible ? '' : 'invisible-header'}`} style={{ backgroundColor: background }}>
+        <header style={{ backgroundColor: background }}>
             {/* Header Logo */}
-            <img
+            < img
                 src={Logo}
                 id="HeaderLogo"
                 alt="Logo"
@@ -122,23 +122,25 @@ const Header = ({ background, dropdownBackground }) => {
 
 
             {/* Modal */}
-            {showModal && (
-                <div id="Modal">
-                    <div className="ModalContent">
-                        <p id="ModalTitle"> SOBRE NOSOTROS</p>
-                        <p id="ModalText">
-                            Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país.
+            {
+                showModal && (
+                    <div id="Modal">
+                        <div className="ModalContent">
+                            <p id="ModalTitle"> SOBRE NOSOTROS</p>
+                            <p id="ModalText">
+                                Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país. <br /> <br />
 
-                            Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando el instrumento vital para empezar en este camino.
+                                Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando un instrumento que consdieramos vital para empezar en este camino. <br /> <br />
 
-                            Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada. </p>
+                                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada.<br /> </p>
 
-                        <img src={Cross} id="Cross" onClick={closeModal}></img>
+                            <img src={Cross} id="Cross" onClick={closeModal}></img>
 
+                        </div>
                     </div>
-                </div>
-            )}
-        </header>
+                )
+            }
+        </header >
     );
 };
 export default Header;

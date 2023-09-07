@@ -3,10 +3,13 @@ import Header from "./Header.jsx";
 import "../../styles/EyD.css"
 import Logo from '../../../Logotype 2-02.png';
 import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg'
+import MenuBlanco from '../../../menublanco.svg';
 
-function EyD() {
+const EyD = ({ dropdownBackground }) => {
     const [showContactModal, setShowContactModal] = useState(false)
     const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
+
+    const [showDropdown, setShowDropdown] = useState(false);
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -50,6 +53,11 @@ function EyD() {
     const closeModal = () => {
         setShowModal(false);
     };
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+
     return (
         <div>
             <header >
@@ -94,18 +102,41 @@ function EyD() {
                         <div className="ModalContent">
                             <p id="ModalTitle"> SOBRE NOSOTROS</p>
                             <p id="ModalText">
-                                Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país.
+                                Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país. <br /> <br />
 
-                                Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando el instrumento vital para empezar en este camino.
+                                Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando un instrumento que consdieramos vital para empezar en este camino. <br /> <br />
 
-                                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada. </p>
+                                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada.<br /> </p>
 
                             <img src={Cross} id="Cross" onClick={closeModal}></img>
 
                         </div>
                     </div>
                 )}
+
+                <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
+                    <img
+                        src={Logo}
+                        id="HeaderLogo2"
+                        alt="Logo"
+                        onClick={handleLogoClick}
+                        style={{ cursor: 'pointer' }}
+                    />
+
+
+                    {showDropdown && (
+                        <div className="dropdown-content" style={{ backgroundColor: dropdownBackground }}>
+                            <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Benefits')}> BENEFICIOS </button>
+                            <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Products')}>ICE PODS</button>
+                            <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={openModal}>SOBRE NOSOTROS</button>
+                            <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'FAQs')}>INFORMACIÓN DE USO</button>
+                        </div>
+                    )}
+                </div>
+
             </header>
+
+
 
 
             <p id="EyDTitle"> Términos & Condiciones </p>
@@ -118,7 +149,7 @@ function EyD() {
             <p id="EyDSubtitle"> Política de Cambios </p>
             <p id="EyDInfo"> Contactanos en el caso de que desees cambiar el Ice Pod por otro modelo o por el estado del mismo. Confiamos en la calidad de nuestros productos, pero si un producto se considera defectuoso, te ofreceremos un reemplazo. Debes proporcionar una prueba de compra, y también nos reservamos el derecho de inspeccionar el artículo para determinar si califica como defectuoso.</p>
             <p id="EyDSubtitle"> Garantía </p>
-            <p id="EyDInfo"> Todos los Ice Pods vienen con una garantía completa de 6 meses desde el momento de la compra. Es posible extender la garantía hasta por 2 años con un pequeño cargo adicional al momento de la compra. </p>
+            <p id="EyDInfo"> Todos los Ice Pods vienen con una garantía completa de 6 meses desde el momento de la compra. Es posible extender la garantía hasta por 2 años con un pequeño cargo adicional. </p>
 
 
 

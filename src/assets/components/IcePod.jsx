@@ -13,7 +13,7 @@ import Menu from '../../../menu_FILL0_wght400_GRAD0_opsz48.svg';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const Pod1 = ({ dropdownBackground }) => {
+const IcePod = ({ dropdownBackground }) => {
     const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
     const [showContactModal, setShowContactModal] = useState(false)
     const [showEspecificaciones, setShowEspecificaciones] = useState(false);
@@ -129,36 +129,35 @@ const Pod1 = ({ dropdownBackground }) => {
                 {showModal && (
                     <div id="Modal">
                         <div className="ModalContent">
-                            <p id="ModalTitle">SOBRE NOSOTROS</p>
+                            <p id="ModalTitle"> SOBRE NOSOTROS</p>
                             <p id="ModalText">
-                                Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país.
+                                Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país. <br /> <br />
 
-                                Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando el instrumento vital para empezar en este camino.
+                                Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando un instrumento que consdieramos vital para empezar en este camino. <br /> <br />
 
-                                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada.
-                            </p>
+                                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada.<br /> </p>
+
                             <img src={Cross} id="Cross" onClick={closeModal}></img>
+
                         </div>
                     </div>
                 )}
+
+                <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
+                    <img
+                        src={Logo}
+                        id="HeaderLogo2"
+                        alt="Logo"
+                        onClick={handleLogoClick}
+                        style={{ cursor: 'pointer' }}
+                    />
+                </div>
 
 
 
             </header>
 
-            <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
-                <button id="DropdownButton" onClick={toggleDropdown}>
-                    <img src={Menu} alt="Menu" />
-                </button>
-                {showDropdown && (
-                    <div className="dropdown-content" style={{ backgroundColor: dropdownBackground }}>
-                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Benefits')}> BENEFICIOS </button>
-                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'Products')}>ICE PODS</button>
-                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={openModal}>SOBRE NOSOTROS</button>
-                        <button className={`dropdownButton ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`} onClick={(event) => scrollToSection(event, 'FAQs')}>INFORMACIÓN DE USO</button>
-                    </div>
-                )}
-            </div>
+
 
             <section id="Contenido">
 
@@ -249,4 +248,4 @@ const Pod1 = ({ dropdownBackground }) => {
     );
 }
 
-export default Pod1;
+export default IcePod;

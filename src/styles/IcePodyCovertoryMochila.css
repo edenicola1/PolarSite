@@ -124,7 +124,7 @@ nav li:hover::before {
     display: flex;
     justify-content: center;
     font-family: 'CustomFont', sans-serif;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-left: 10%;
 }
 
@@ -245,10 +245,10 @@ nav li:hover::before {
     background-color: #121212;
     padding-left: 10%;
     padding-right: 10%;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     position: relative;
-    width: 40%;
+    width: 30%;
 }
 
 #ContactModalTitle {
@@ -256,11 +256,11 @@ nav li:hover::before {
     font-weight: bold;
     margin-top: 5%;
     color: white;
-    margin-bottom: 0%;
+    margin-bottom: -2%;
 }
 
 #ContactModalText {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     color: white;
     text-align: justify;
     padding: 3%;
@@ -326,116 +326,175 @@ nav li:hover::before {
 @media only screen and (max-width: 768px) {
 
 
-    #ContactModal {
-        position: fixed;
-        z-index: 1000;
-        /* Adjust this value as needed */
-        top: 50%;
-        /* Center vertically */
-        left: 100%;
-        /* Center horizontally */
-        transform: translate(-50%, -50%);
-        backdrop-filter: blur(5px);
-        margin-left: 50%;
-        font-family: 'CustomFont', sans-serif;
+    nav {
+        display: none;
     }
 
-    .ContactModalContent {
-        background-color: #121212;
-        padding-left: 10%;
-        padding-right: 10%;
-        border-radius: 5px;
-        text-align: center;
+    #HeaderLogo1 {
+        display: none;
+    }
+
+    #HeaderLogo2 {
+        width: 40%;
+        margin-left: -10%;
+        margin-top: 2%;
         position: relative;
     }
 
-    #ContactModalTitle {
-        font-size: 10vw;
-        font-weight: bold;
-        margin-top: 15%;
-        color: white;
-        margin-bottom: 0%;
-    }
-
-    #ContactModalText {
-        font-size: 4vw;
-        color: white;
-        text-align: justify;
-        padding: 3%;
-
-    }
-
-    #ContactCross {
-        width: 15%;
-        height: 15%;
-        cursor: pointer;
-        position: absolute;
-        top: 2%;
-        left: 2%;
-        filter: brightness(0) invert(1);
-    }
-
-    #ContactCross:hover {
-        transform: scale(1.2);
-        transform: rotate(90deg);
-    }
-
-    #ContactForm1 {
+    #Contenido {
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        max-width: 400px;
-        margin: auto;
+        margin-top: 28%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 
-    #ContactForm1 label {
-        font-weight: bold;
-        margin-bottom: 8px;
+    #Carousel {
+        width: 90%;
+        margin-top: 0%;
+        margin-left: 5%;
+        border-radius: 10px;
+    }
+
+    #PodInfo {
+        width: 100vw;
+        text-align: justify;
+        margin-left: 5%;
+        margin-top: -10%;
+    }
+
+
+    #PodTitle {
+        font-size: 9vw;
+        color: #121212;
+        margin-bottom: -5%;
+        font-family: 'CustomFont-Bold', sans-serif;
+        text-align: left;
+    }
+
+    #PodPrecio {
         font-size: 4vw;
+        color: #888;
+        margin-bottom: 2%;
+        position: relative;
     }
 
-    #ContactForm1 input,
-    #ContactForm1 textarea {
-        padding: 10px;
-        margin-bottom: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        width: 100%;
+    #PodPrecio::before {
+        content: "$180.00 USD";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        text-decoration: line-through;
     }
 
-    /* Add the desired font-family for input fields */
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        font-family: 'CustomFont', sans-serif;
+    #PodPrecio::after {
+        content: "$150.00 USD";
+        color: #000;
+        margin-left: 1%;
+    }
+
+    #PodPrecio1 {
+        font-size: 4vw;
+        color: #888;
+        margin-bottom: 2%;
+        position: relative;
+    }
+
+    #PodPrecio1::before {
+        content: "$200.00 USD";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        text-decoration: line-through;
+    }
+
+    #PodPrecio1::after {
+        content: "$150.00 USD";
+        color: #000;
+        margin-left: 1%;
+    }
+
+    #PodPrecio2 {
+        font-size: 4vw;
+        color: #888;
+        margin-bottom: 2%;
+        position: relative;
+    }
+
+    #PodPrecio2::before {
+        content: "$250.00 USD";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        text-decoration: line-through;
+    }
+
+    #PodPrecio2::after {
+        content: "$150.00 USD";
+        color: #000;
+        margin-left: 1%;
+    }
+
+    #PodSubtitle {
         font-size: 3vw;
-        /* Replace with your font name */
-        /* Other existing styles for input fields */
+        font-weight: bold;
+        margin-bottom: 2%;
+        color: #121212;
     }
 
-
-    #ContactForm1 textarea {
-        resize: vertical;
+    #PodParagraph {
+        font-size: 3vw;
+        line-height: 2;
+        margin-bottom: 5%;
+        width: 80%;
+        color: #888;
     }
 
-    #ContactForm1 button {
-        background-color: rgb(0, 170, 255);
-        color: white;
+    #Agregar {
+        padding: 2% 4%;
+        font-size: 5vw;
+        background-color: #3b8ed6;
+        color: #fff;
         border: none;
-        border-radius: 4px;
+        border-radius: 20px;
         cursor: pointer;
-        transition: background-color 0.3s;
-        margin-top: 10%;
-        width: 110%;
-        font-size: 4vw;
+        width: 65%;
+        margin-left: 8%;
     }
 
-    #ContactForm1 button:hover {
-        background-color: rgb(0, 136, 204);
+    #Info {
+        color: #121212;
+        height: fit-content;
+        margin-top: 5%;
+        border-top: 0.7px solid black;
+        width: 80%;
     }
 
-    #ContactForm1 p {
-        margin-top: 10px;
-        font-size: 4vw;
-        color: #333;
+    .InfoItem {
+        border-bottom: 0.7px solid black;
+        padding-bottom: 2%;
+        position: relative;
+        cursor: pointer;
     }
+
+    .InfoItem:hover {
+        transform: scale(102%);
+    }
+
+    #Sum {
+        width: 5%;
+        opacity: 0.7;
+        position: absolute;
+        left: 94%;
+        top: -5%;
+    }
+
+
 }

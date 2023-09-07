@@ -202,7 +202,7 @@ header {
 #ModalTitle {
     font-size: 4vw;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
     color: white;
 }
 
@@ -271,6 +271,14 @@ header {
     #Cross {
         width: 10%;
         height: 10%;
+    }
+
+    .dropdown .black-dropdown {
+        width: 100vw;
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     /* Dropdown container */

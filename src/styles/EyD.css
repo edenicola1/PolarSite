@@ -128,8 +128,8 @@ header {
 
 .ModalContent {
     background-color: #121212;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 2%;
+    border-radius: 10px;
     max-width: 70%;
     max-height: 80%;
     text-align: center;
@@ -138,8 +138,8 @@ header {
 
 #ModalTitle {
     font-size: 4vw;
-    font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
     color: white;
 }
 
@@ -149,6 +149,7 @@ header {
     color: white;
     text-align: justify;
     padding: 3%;
+    row-gap: 5%;
 }
 
 
@@ -157,8 +158,8 @@ header {
     height: 5%;
     cursor: pointer;
     position: absolute;
-    top: 3%;
-    left: 1%;
+    top: 2%;
+    left: 0%;
     filter: brightness(0) invert(1);
 }
 
@@ -186,4 +187,49 @@ header {
     font-family: 'CustomFont', sans-serif;
     color: grey;
 
+}
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    #HeaderLogo1 {
+        display: none;
+    }
+
+    #HeaderLogo2 {
+        width: 40%;
+        margin-left: -10%;
+        margin-top: 2%;
+        position: relative;
+    }
+
+    #EyDTitle {
+        font-size: 7vw;
+        font-family: 'CustomFont-Bold', sans-serif;
+        color: black;
+        margin-top: 35%;
+        margin-bottom: 10%;
+    }
+
+    #EyDSubtitle {
+        font-size: 5vw;
+        text-align: start;
+        margin-left: 10%;
+        font-family: 'CustomFont', sans-serif;
+        color: black;
+
+    }
+
+    #EyDInfo {
+        font-size: 3vw;
+        text-align: justify;
+        margin-left: 10%;
+        font-family: 'CustomFont', sans-serif;
+        color: grey;
+        margin-bottom: 10%;
+
+    }
 }
