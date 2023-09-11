@@ -9,7 +9,7 @@
 }
 
 
-header {
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -70,7 +70,7 @@ nav li:hover::before {
 
 
 
-#Modal {
+/* #Modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -117,7 +117,7 @@ nav li:hover::before {
     top: 3%;
     left: 1%;
     filter: brightness(0) invert(1);
-}
+} */
 
 
 #Contenido {
@@ -227,7 +227,7 @@ nav li:hover::before {
 }
 
 
-
+/* 
 #ContactModal {
     position: fixed;
     margin-top: 3%;
@@ -321,7 +321,7 @@ nav li:hover::before {
     margin-top: 10px;
     font-size: 14px;
     color: #333;
-}
+} */
 
 @media only screen and (max-width: 768px) {
 

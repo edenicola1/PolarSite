@@ -26,9 +26,11 @@ const Header = ({ background, dropdownBackground }) => {
                 setScrollBackground(true);
                 setScrollLeft(true);
 
+
             } else {
                 setScrollBackground(false);
                 setScrollLeft(false);
+
 
             }
 
@@ -82,7 +84,10 @@ const Header = ({ background, dropdownBackground }) => {
                 id="HeaderLogo"
                 alt="Logo"
                 onClick={handleLogoClick}
-                style={{ cursor: 'pointer' }}
+                style={{
+                    cursor: 'pointer',
+                    display: headerVisible ? 'block' : 'none' // Show/hide logo based on headerVisible
+                }}
             />
 
             {/* Navigation Links */}
@@ -107,7 +112,11 @@ const Header = ({ background, dropdownBackground }) => {
 
             <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
                 <button id="DropdownButton" onClick={toggleDropdown}>
-                    <img src={Menu} alt="Menu" />
+                    <img src={Menu} alt="Menu"
+                        style={{
+                            cursor: 'pointer',
+                            display: headerVisible ? 'block' : 'none' // Show/hide logo based on headerVisible
+                        }} />
                 </button>
                 {showDropdown && (
                     <div className="dropdown-content" style={{ backgroundColor: dropdownBackground }}>

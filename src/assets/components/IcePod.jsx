@@ -91,7 +91,7 @@ const IcePod = ({ dropdownBackground }) => {
 
     return (
         <div>
-            <header>
+            <div id="header">
                 {/* Header Logo */}
                 <img
                     src={Logo}
@@ -155,7 +155,7 @@ const IcePod = ({ dropdownBackground }) => {
 
 
 
-            </header>
+            </div>
 
 
 

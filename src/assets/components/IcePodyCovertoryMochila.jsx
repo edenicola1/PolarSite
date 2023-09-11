@@ -14,12 +14,19 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 
-function IcePodyCovertoryMochila() {
+const IcePodyCovertoryMochila = ({ dropdownBackground }) => {
     const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
     const [showContactModal, setShowContactModal] = useState(false)
     const [showEspecificaciones, setShowEspecificaciones] = useState(false);
     const [showEnvio, setShowEnvio] = useState(false);
     const [showPrecauciones, setShowPrecauciones] = useState(false);
+
+
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -46,6 +53,7 @@ function IcePodyCovertoryMochila() {
     const handleLogoClick = () => {
         window.location.href = "/";
     };
+
     const openModal = () => {
         setShowModal(true);
 
@@ -84,7 +92,7 @@ function IcePodyCovertoryMochila() {
 
     return (
         <div>
-            <header >
+            <div id="header">
                 {/* Header Logo */}
                 <img
                     src={Logo}
@@ -96,27 +104,25 @@ function IcePodyCovertoryMochila() {
 
                 {/* Navigation Links */}
                 <nav>
-                    <ul
-
-                    >
-                        <a href="/icepod">
-                            <li
-                            >
-                                ICE PODS
-
-                            </li>
+                    <ul>
+                        <li> <a href="/icepod">
+                            ICE POD
                         </a>
-                        <li
-                            onClick={openModal}>
-                            SOBRE NOSOTROS
-
                         </li>
-                        <li onClick={openContactModal}
-                        >
+
+                        <li> <a href="/icepodycovertor">
+                            ICE POD + COVERTOR
+                        </a>
+                        </li>
+
+                        <li > <a href="/icepodycovertorymochila">
+                            ICE POD COMPLETO
+                        </a>
+                        </li>
+
+                        <li onClick={openContactModal}>
                             CONTACTO
-
                         </li>
-
                     </ul>
                 </nav>
 
@@ -138,7 +144,7 @@ function IcePodyCovertoryMochila() {
                     </div>
                 )}
 
-                <div >
+                <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
                     <img
                         src={Logo}
                         id="HeaderLogo2"
@@ -146,12 +152,11 @@ function IcePodyCovertoryMochila() {
                         onClick={handleLogoClick}
                         style={{ cursor: 'pointer' }}
                     />
-
-
                 </div>
 
-            </header>
 
+
+            </div>
 
 
 

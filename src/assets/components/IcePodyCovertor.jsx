@@ -84,7 +84,7 @@ function IcePodyConvertor() {
 
   return (
     <div>
-      <header>
+      <div id="header">
         {/* Header Logo */}
         <img
           src={Logo}
@@ -134,7 +134,20 @@ function IcePodyConvertor() {
             </div>
           </div>
         )}
-      </header>
+
+
+        <img
+          src={Logo}
+          id="HeaderLogo3"
+          alt="Logo"
+          onClick={handleLogoClick}
+          style={{ cursor: 'pointer' }}
+        />
+
+
+
+
+      </div>
 
 
 

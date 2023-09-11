@@ -112,6 +112,7 @@ header {
     transform: scaleX(1);
 }
 
+/* 
 #Modal {
     position: fixed;
     top: 0;
@@ -161,7 +162,7 @@ header {
     top: 2%;
     left: 0%;
     filter: brightness(0) invert(1);
-}
+} */
 
 #EyDTitle {
     font-size: 3vw;

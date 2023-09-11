@@ -763,6 +763,8 @@ textarea {
         padding: 10%;
         left: -162%;
         top: 2%;
+        margin-left: 20%;
+        width: 35vw;
 
     }
 
@@ -1179,50 +1181,53 @@ textarea {
 
     #ContactModal {
         position: fixed;
-        z-index: 1000;
-        /* Adjust this value as needed */
-        top: 50%;
-        /* Center vertically */
-        left: 100%;
-        /* Center horizontally */
-        transform: translate(-50%, -50%);
+        margin-top: 0%;
+        margin-left: 47%;
+        left: 0;
+        width: 110vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         backdrop-filter: blur(5px);
-        margin-left: 50%;
-        font-family: 'CustomFont', sans-serif;
+
     }
 
     .ContactModalContent {
         background-color: #121212;
         padding-left: 10%;
         padding-right: 10%;
-        border-radius: 5px;
+        border-radius: 10px;
         text-align: center;
         position: relative;
+        width: 64%;
     }
 
     #ContactModalTitle {
-        font-size: 10vw;
+        font-size: 7vw;
         font-weight: bold;
-        margin-top: 15%;
+        margin-top: 5%;
         color: white;
         margin-bottom: 0%;
+        margin-left: 2%;
     }
 
     #ContactModalText {
-        font-size: 4vw;
+        font-size: 5vw;
         color: white;
         text-align: justify;
-        padding: 3%;
+        padding: 2%;
 
     }
 
     #ContactCross {
-        width: 15%;
-        height: 15%;
+        width: 5%;
+        height: 5%;
         cursor: pointer;
         position: absolute;
-        top: 2%;
-        left: 2%;
+        top: 1%;
+        left: 3%;
         filter: brightness(0) invert(1);
     }
 
@@ -1241,7 +1246,6 @@ textarea {
     #ContactForm1 label {
         font-weight: bold;
         margin-bottom: 8px;
-        font-size: 4vw;
     }
 
     #ContactForm1 input,
@@ -1252,17 +1256,6 @@ textarea {
         border-radius: 4px;
         width: 100%;
     }
-
-    /* Add the desired font-family for input fields */
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        font-family: 'CustomFont', sans-serif;
-        font-size: 3vw;
-        /* Replace with your font name */
-        /* Other existing styles for input fields */
-    }
-
 
     #ContactForm1 textarea {
         resize: vertical;
@@ -1276,8 +1269,7 @@ textarea {
         cursor: pointer;
         transition: background-color 0.3s;
         margin-top: 10%;
-        width: 110%;
-        font-size: 4vw;
+        width: 105%;
     }
 
     #ContactForm1 button:hover {
@@ -1286,7 +1278,7 @@ textarea {
 
     #ContactForm1 p {
         margin-top: 10px;
-        font-size: 4vw;
+        font-size: 14px;
         color: #333;
     }
 
