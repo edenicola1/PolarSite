@@ -13,12 +13,19 @@ import emailjs from 'emailjs-com';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-function IcePodyConvertor() {
+const IcePodyCovertor = ({ dropdownBackground }) => {
   const [showModal, setShowModal] = useState(false); // State for controlling the modal visibility
   const [showContactModal, setShowContactModal] = useState(false)
   const [showEspecificaciones, setShowEspecificaciones] = useState(false);
   const [showEnvio, setShowEnvio] = useState(false);
   const [showPrecauciones, setShowPrecauciones] = useState(false);
+
+
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -122,28 +129,29 @@ function IcePodyConvertor() {
         {showModal && (
           <div id="Modal">
             <div className="ModalContent">
-              <p id="ModalTitle">SOBRE NOSOTROS</p>
+              <p id="ModalTitle"> SOBRE NOSOTROS</p>
               <p id="ModalText">
-                Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país.
+                Polar surge en 2023 como resultado de la pasión y dedicación de dos entusiastas del bienestar personal, con el objetivo de expandir esta práctica a nuestro país. <br /> <br />
 
-                Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando el instrumento vital para empezar en este camino.
+                Nuestra misión es inspirar y facilitar el camino hacia una vida más saludable, proporcionando un instrumento que consdieramos vital para empezar en este camino. <br /> <br />
 
-                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada.
-              </p>
+                Trabajamos constantemente para desarrollar soluciones que marquen la diferencia en la vida de nuestros clientes. Valoramos la satisfacción de ellos y nos enorgullece ofrecer una experiencia excepcional, desde la calidad de nuestros productos hasta nuestro servicio al cliente. Te invitamos a unirte a nosotros en este emocionante viaje hacia una vida más plena y equilibrada.<br /> </p>
+
               <img src={Cross} id="Cross" onClick={closeModal}></img>
+
             </div>
           </div>
         )}
 
-
-        <img
-          src={Logo}
-          id="HeaderLogo3"
-          alt="Logo"
-          onClick={handleLogoClick}
-          style={{ cursor: 'pointer' }}
-        />
-
+        <div className={`dropdown ${dropdownBackground === 'white' ? 'white-dropdown' : 'black-dropdown'}`}>
+          <img
+            src={Logo}
+            id="HeaderLogo2"
+            alt="Logo"
+            onClick={handleLogoClick}
+            style={{ cursor: 'pointer' }}
+          />
+        </div>
 
 
 
@@ -237,4 +245,4 @@ function IcePodyConvertor() {
 
 
 
-export default IcePodyConvertor
+export default IcePodyCovertor
