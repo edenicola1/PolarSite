@@ -119,9 +119,7 @@ const IcePod = ({ dropdownBackground }) => {
                         </a>
                         </li>
 
-                        <li onClick={openContactModal}>
-                            CONTACTO
-                        </li>
+
                     </ul>
                 </nav>
 
@@ -195,7 +193,15 @@ const IcePod = ({ dropdownBackground }) => {
                         </p>
                         {showEspecificaciones && (
                             <p className="InfoText">
-                                Aquí van las especificaciones del producto...
+                                <li>Altura de 75 cm. </li>
+                                <li> Diámetro de 80 cm. </li>
+                                <li>Capacidad de 320 litros. </li>
+                                <li>Peso vacío de 3.5 kg. </li>
+                                <li>Peso lleno de 320 kg. </li>
+                                <li>3 capas aislantes de TPE. </li>
+                                <li>Capa externa reforzada de tela de poliéster de rip-stop. </li>
+                                <li>Revestimiento interior de PVC resistente a los rayos UV y que cuida la piel. </li>
+                                <li>Tapa térmica para mantener el agua a una temperatura constante. </li>
 
                             </p>
                         )}
@@ -214,7 +220,10 @@ const IcePod = ({ dropdownBackground }) => {
                         </p>
                         {showPrecauciones && (
                             <p className="InfoText">
-                                Aquí van las precauciones de uso...
+                                <li>Antes de usar el Polar IcePod, limpiar el interior con agua tibia y jabón y secarlo con un paño seco y limpio. </li>
+                                <li> Nunca limpiar tu Polar IcePod con detergentes y productos químicos fabricados con lejía. Esto puede degradar el material y afectar el sellado impermeable. </li>
+                                <li>Se recomienda drenar, limpiar y secar tu Polar IcePod cada 20 días. </li>
+                                <li>En caso de llenar con agua caliente, que esta no supere los 50°C. </li>
                             </p>
                         )}
                     </div>

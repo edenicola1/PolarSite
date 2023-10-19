@@ -178,7 +178,7 @@ const IcePodyCovertoryMochila = ({ dropdownBackground }) => {
 
                 <div id="PodInfo">
                     <p id="PodTitle">Ice Pod Completo</p>
-                    <p id="PodPrecio2">$250.00 USD</p>
+                    <p id="PodPrecio2">$200.00 USD</p>
                     <p id="PodSubtitle">Tu propio Baño de Hielo Portátil</p>
                     <p id="PodParagraph">
                         Descubrí el Polar Ice Pod, el baño de hielo portátil definitivo para la recuperación profesional. Diseñado con precisión y pensado para brindarte una experiencia única de terapia con agua fría. Con el Polar Ice Pod, podrás disfrutar de los beneficios de la terapia con agua fría en cualquier momento y lugar. Su diseño compacto y portátil te permite llevarlo contigo a donde vayas, ya sea en interiores o al aire libre. Sumérgete en un baño de hielo revitalizante y potencia tu recuperación con el Polar Ice Pod. El covertor es la pieza ideal para cuando el Ice Pod es intalado a la interperie para proteger el agua y mantenerla a bajas temperaturas. Con la mochila de transporte, transportar el Ice Pod y sus accesorios nunca va a ser un inconveniente.
@@ -191,7 +191,15 @@ const IcePodyCovertoryMochila = ({ dropdownBackground }) => {
                         </p>
                         {showEspecificaciones && (
                             <p className="InfoText">
-                                Aquí van las especificaciones del producto...
+                                <li>Altura de 75 cm. </li>
+                                <li> Diámetro de 80 cm. </li>
+                                <li>Capacidad de 320 litros. </li>
+                                <li>Peso vacío de 3.5 kg. </li>
+                                <li>Peso lleno de 320 kg. </li>
+                                <li>3 capas aislantes de TPE. </li>
+                                <li>Capa externa reforzada de tela de poliéster de rip-stop. </li>
+                                <li>Revestimiento interior de PVC resistente a los rayos UV y que cuida la piel. </li>
+                                <li>Tapa térmica para mantener el agua a una temperatura constante. </li>
 
                             </p>
                         )}
@@ -210,7 +218,10 @@ const IcePodyCovertoryMochila = ({ dropdownBackground }) => {
                         </p>
                         {showPrecauciones && (
                             <p className="InfoText">
-                                Aquí van las precauciones de uso...
+                                <li>Antes de usar el Polar IcePod, limpiar el interior con agua tibia y jabón y secarlo con un paño seco y limpio. </li>
+                                <li> Nunca limpiar tu Polar IcePod con detergentes y productos químicos fabricados con lejía. Esto puede degradar el material y afectar el sellado impermeable. </li>
+                                <li>Se recomienda drenar, limpiar y secar tu Polar IcePod cada 20 días. </li>
+                                <li>En caso de llenar con agua caliente, que esta no supere los 50°C. </li>
                             </p>
                         )}
                     </div>

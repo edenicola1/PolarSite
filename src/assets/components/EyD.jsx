@@ -148,8 +148,7 @@ const EyD = ({ dropdownBackground }) => {
             <p id="EyDInfo"> Confiamos en que nuestros clientes estarán satisfechos con su compra de productos Polar. Sin embargo, si no estás completamente satisfecho, podes devolver el artículo dentro de 90 días después su entrega. Los productos deben ser devueltos sin haber sido usados, en su estado original y en su empaque original. Se aplicará un cargo por reposición para los productos abiertos y utilizados.</p>
             <p id="EyDSubtitle"> Política de Cambios </p>
             <p id="EyDInfo"> Contactanos en el caso de que desees cambiar el Ice Pod por otro modelo o por el estado del mismo. Confiamos en la calidad de nuestros productos, pero si un producto se considera defectuoso, te ofreceremos un reemplazo. Debes proporcionar una prueba de compra, y también nos reservamos el derecho de inspeccionar el artículo para determinar si califica como defectuoso.</p>
-            <p id="EyDSubtitle"> Garantía </p>
-            <p id="EyDInfo"> Todos los Ice Pods vienen con una garantía completa de 6 meses desde el momento de la compra. Es posible extender la garantía hasta por 2 años con un pequeño cargo adicional. </p>
+
 
 
 

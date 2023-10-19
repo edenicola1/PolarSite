@@ -21,9 +21,9 @@ import Product2 from "../../../Mesa de trabajo 1 copia.png";
 import Product3 from "../../../Mesa de trabajo 1.png";
 
 import IgLogo from "../../../instagram-logo-instagram-icon-transparent-free-png.webp";
-import Foto1 from "../../../DSC00329.webp";
-import Foto2 from "../../../DSC00383.webp";
-import Foto3 from "../../../the-ice-pod.webp"
+import Foto2 from "../../../IMG_1797.jpg";
+import Foto1 from "../../../IMG_1826 (1).jpg";
+import Foto3 from "../../../IMG_1950.jpg";
 
 import Gif from "../../../Index-of-infograf2017-08-moonphasesimg.gif"
 

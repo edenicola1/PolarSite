@@ -6,6 +6,8 @@ import PhoneLogo from "../../../call_FILL0_wght400_GRAD0_opsz48.png";
 import WppLogo from "../../../whatsapp.svg";
 import emailjs from 'emailjs-com';
 import Cross from '../../../close_FILL0_wght400_GRAD0_opsz48.svg'
+import ManualDeUsoPDF from '../../../Manual.pdf';
+
 
 
 const Footer = () => {
@@ -14,6 +16,7 @@ const Footer = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState('');
+    const [showContactModal, setShowContactModal] = useState(false)
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -62,8 +65,19 @@ const Footer = () => {
     };
 
 
+    const handleManualDeUsoClick = () => {
+        // Open the PDF in a new browser window
+        window.open(ManualDeUsoPDF, '_blank');
+    }
 
 
+    const openContactModal = () => {
+        setShowContactModal(true)
+    }
+
+    const closeContactModal = () => {
+        setShowContactModal(false)
+    }
 
 
     return (
@@ -87,12 +101,24 @@ const Footer = () => {
                     <ul>
 
                         <li><a href="/enviosydevoluciones">Términos & Condiciones</a></li>
-                        <li> Manuales de Uso</li>
+                        <li onClick={handleManualDeUsoClick}>
+                            Manual de Uso
+                        </li>
                     </ul>
                 </div>
                 <div className="footer-column">
                     <h3>Contactanos</h3>
-                    <form onSubmit={sendEmail} id="ContactForm">
+
+                    <ul onClick={openContactModal} style={{ cursor: 'pointer' }}>
+                        <img src={MailLogo}></img>
+                    </ul>
+
+                    <ul style={{ cursor: 'pointer' }}>
+                        <a href="https://wa.me/59895797033" target="_blank">
+                            <img id="Wpp" src={WppLogo}></img>
+                        </a>
+                    </ul>
+                    {/* <form onSubmit={sendEmail} id="ContactForm">
                         <label htmlFor="name">Nombre:</label>
                         <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
 
@@ -104,7 +130,7 @@ const Footer = () => {
 
                         <button type="submit">Enviar</button>
                     </form>
-                    <p>{status}</p>
+                    <p>{status}</p> */}
 
                 </div>
             </section>
@@ -131,6 +157,30 @@ const Footer = () => {
                     </div>
                 </div>
             )} */}
+
+            {showContactModal && (
+                <div id="ContactModal1" className="active">
+                    <div className="ContactModalContent">
+                        <p id="ContactModalTitle">CONTACTANOS</p>
+                        <p id="ContactModalText">
+                            <form onSubmit={sendEmail} id="ContactForm1">
+                                <label htmlFor="name">Nombre:</label>
+                                <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+
+                                <label htmlFor="email">Email:</label>
+                                <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+
+                                <label htmlFor="message">Mensaje:</label>
+                                <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="5" required />
+
+                                <button type="submit" id="ContactButton">Enviar</button>
+                            </form>
+                            <p>{status}</p>
+                        </p>
+                        <img src={Cross} id="ContactCross" onClick={closeContactModal}></img>
+                    </div>
+                </div>
+            )}
 
         </footer>
     );

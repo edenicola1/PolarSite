@@ -168,7 +168,7 @@ nav li:hover::before {
 }
 
 #PodPrecio::after {
-    content: "$150.00 USD";
+    content: "$120.00 USD";
     color: #000;
     margin-left: 1%;
 }
@@ -246,7 +246,7 @@ nav li:hover::before {
     background-color: #121212;
     padding-left: 10%;
     padding-right: 10%;
-    border-radius: 50px;
+    border-radius: 5px;
     text-align: center;
     position: relative;
     width: 40%;

@@ -553,7 +553,7 @@
 
 #DivFotos {
     height: 50vh;
-    margin-top: 3%;
+    margin-top: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -561,15 +561,15 @@
 }
 
 #Foto1 {
-    width: 25%;
+    width: 20%;
 }
 
 #Foto2 {
-    width: 25%;
+    width: 30%;
 }
 
 #Foto3 {
-    width: 25%;
+    width: 20%;
 }
 
 .scaled-image {
