@@ -110,7 +110,7 @@ const Footer = () => {
                     <h3>Contactanos</h3>
 
                     <ul onClick={openContactModal} style={{ cursor: 'pointer' }}>
-                        <img src={MailLogo}></img>
+                        <img id="Mail" src={MailLogo}></img>
                     </ul>
 
                     <ul style={{ cursor: 'pointer' }}>

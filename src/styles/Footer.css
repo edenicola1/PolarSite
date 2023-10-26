@@ -193,7 +193,11 @@ footer {
 }
 
 #Wpp {
-    width: 10%;
+    width: 8%;
+}
+
+#Mail {
+    width: 8%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -314,5 +318,16 @@ footer {
     #CompanyInfo {
         margin-left: 0%;
     }
+
+    #Wpp {
+        margin-left: -92%;
+    }
+
+    #Mail {
+        width: 8%;
+        margin-left: 0%;
+        margin-bottom: 3%;
+    }
+
 
 }
