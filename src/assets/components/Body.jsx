@@ -269,7 +269,7 @@ function Body() {
                                 <img src={Product2} alt="Image 2" id="fotoProduct2" />
                                 <a href="/icepodycovertor"></a>
                                 <div className="slide-legend">
-                                    <h3 id="ProductTitle">Ice Pod de inmersión en frío + Covertor</h3>
+                                    <h3 id="ProductTitle">Ice Pod de inmersión en frío + Cobertor</h3>
                                     {/* <p>$5000 </p> */}
                                 </div>
                             </div>
@@ -278,7 +278,7 @@ function Body() {
                             <div id="divProduct">
                                 <img src={Product3} alt="Image 3" id="fotoProduct3" />
                                 <div className="slide-legend">
-                                    <h3 id="ProductTitle">Ice Pod de inmersión en frío + Covertor + Mochila para transporte </h3>
+                                    <h3 id="ProductTitle">Ice Pod de inmersión en frío + Cobertor + Mochila para transporte </h3>
                                     {/* <p>$6000 </p> */}
                                 </div>
                             </div>

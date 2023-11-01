@@ -91,7 +91,7 @@ const Footer = () => {
                     <ul>
                         <li><a href="/icepod">Pod de inmersión en frío</a></li>
 
-                        <li><a href="/icepodycovertor">Pod de inmersión en frío + Covertor</a></li>
+                        <li><a href="/icepodycovertor">Pod de inmersión en frío + Cobertor</a></li>
                         <li><a href="/icepodycovertorymochila">Pod de inmersión en frío Completo</a></li>
 
                     </ul>

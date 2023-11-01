@@ -110,7 +110,7 @@ const IcePod = ({ dropdownBackground }) => {
                         </li>
 
                         <li> <a href="/icepodycovertor">
-                            ICE POD + COVERTOR
+                            ICE POD + COBERTOR
                         </a>
                         </li>
 

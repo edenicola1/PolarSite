@@ -111,7 +111,7 @@ const IcePodyCovertoryMochila = ({ dropdownBackground }) => {
                         </li>
 
                         <li> <a href="/icepodycovertor">
-                            ICE POD + COVERTOR
+                            ICE POD + COBERTOR
                         </a>
                         </li>
 
@@ -181,7 +181,7 @@ const IcePodyCovertoryMochila = ({ dropdownBackground }) => {
                     <p id="PodPrecio2">$200.00 USD</p>
                     <p id="PodSubtitle">Tu propio Baño de Hielo Portátil</p>
                     <p id="PodParagraph">
-                        Descubrí el Polar Ice Pod, el baño de hielo portátil definitivo para la recuperación profesional. Diseñado con precisión y pensado para brindarte una experiencia única de terapia con agua fría. Con el Polar Ice Pod, podrás disfrutar de los beneficios de la terapia con agua fría en cualquier momento y lugar. Su diseño compacto y portátil te permite llevarlo contigo a donde vayas, ya sea en interiores o al aire libre. Sumérgete en un baño de hielo revitalizante y potencia tu recuperación con el Polar Ice Pod. El covertor es la pieza ideal para cuando el Ice Pod es intalado a la interperie para proteger el agua y mantenerla a bajas temperaturas. Con la mochila de transporte, transportar el Ice Pod y sus accesorios nunca va a ser un inconveniente.
+                        Descubrí el Polar Ice Pod, el baño de hielo portátil definitivo para la recuperación profesional. Diseñado con precisión y pensado para brindarte una experiencia única de terapia con agua fría. Con el Polar Ice Pod, podrás disfrutar de los beneficios de la terapia con agua fría en cualquier momento y lugar. Su diseño compacto y portátil te permite llevarlo contigo a donde vayas, ya sea en interiores o al aire libre. Sumérgete en un baño de hielo revitalizante y potencia tu recuperación con el Polar Ice Pod. El cobertor es la pieza ideal para cuando el Ice Pod es intalado a la interperie para proteger el agua y mantenerla a bajas temperaturas. Con la mochila de transporte, transportar el Ice Pod y sus accesorios nunca va a ser un inconveniente.
                     </p>
                     <button id="Agregar" onClick={openContactModal}> Contactanos </button>
                     <div id="Info">
