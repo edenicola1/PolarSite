@@ -158,7 +158,7 @@ nav li:hover::before {
 }
 
 #PodPrecio::before {
-    content: "$180.00 USD";
+    content: "$195.00 USD";
     position: absolute;
     left: 0;
     top: 50%;
@@ -378,28 +378,6 @@ a {
         font-family: 'CustomFont-Bold', sans-serif;
     }
 
-    #PodPrecio {
-        font-size: 1vw;
-        color: #888;
-        margin-bottom: 2%;
-        position: relative;
-    }
-
-    #PodPrecio::before {
-        content: "$180.00 USD";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #888;
-        text-decoration: line-through;
-    }
-
-    #PodPrecio::after {
-        content: "$150.00 USD";
-        color: #000;
-        margin-left: 1%;
-    }
 
     #PodSubtitle {
         font-size: 1.3vw;

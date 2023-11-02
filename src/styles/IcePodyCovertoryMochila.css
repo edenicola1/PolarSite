@@ -377,43 +377,15 @@ nav li:hover::before {
     }
 
     #PodPrecio::before {
-        content: "$180.00 USD";
+        content: "$195.00 USD";
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
         color: #888;
-        text-decoration: line-through;
+
     }
 
-    #PodPrecio::after {
-        content: "$150.00 USD";
-        color: #000;
-        margin-left: 1%;
-    }
-
-    #PodPrecio1 {
-        font-size: 4vw;
-        color: #888;
-        margin-bottom: 2%;
-        position: relative;
-    }
-
-    #PodPrecio1::before {
-        content: "$150.00 USD";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #888;
-        text-decoration: line-through;
-    }
-
-    #PodPrecio1::after {
-        content: "$150.00 USD";
-        color: #000;
-        margin-left: 1%;
-    }
 
     #PodPrecio2 {
         font-size: 4vw;
@@ -422,21 +394,6 @@ nav li:hover::before {
         position: relative;
     }
 
-    #PodPrecio2::before {
-        content: "$250.00 USD";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #888;
-        text-decoration: line-through;
-    }
-
-    #PodPrecio2::after {
-        content: "$150.00 USD";
-        color: #000;
-        margin-left: 1%;
-    }
 
     #PodSubtitle {
         font-size: 3vw;
