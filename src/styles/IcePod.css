@@ -164,14 +164,10 @@ nav li:hover::before {
     top: 50%;
     transform: translateY(-50%);
     color: #888;
-    text-decoration: line-through;
+
 }
 
-#PodPrecio::after {
-    content: "$120.00 USD";
-    color: #000;
-    margin-left: 1%;
-}
+
 
 #PodSubtitle {
     font-size: 1.3vw;
